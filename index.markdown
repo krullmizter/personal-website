@@ -2,10 +2,12 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default
+title: Home
 ---
 
-### Hi & Welcome To Me! 
+## Hi & Welcome To Me! 
+---
 My name is Samuel Granvik, I'm a developer, nerd, dog lover and IT engineer from Finland.
 
 This website holds my personal interests, some *future* blog posts, and the base information of me, what I'm doing and what I'm interested in.

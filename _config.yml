@@ -21,8 +21,7 @@
 title: Samuel Granvik
 email: samuelgranvik@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal website! I'm a IT engineer, system developer and tech enthusiast.
-  This website serves as the base for my portfolio, blog and other content.
+  Welcome to my personal website! This website serves as the base for my portfolio, blog and other content.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.samuelgranvik.tech" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:

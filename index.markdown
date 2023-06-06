@@ -6,7 +6,7 @@ layout: default
 title: Home
 ---
 
-## Hi & Welcome To Me! 
+## Hi & Welcome To Me! 👋 
 ---
 My name is Samuel Granvik, I'm a developer, nerd, dog lover and IT engineer from Finland.
 

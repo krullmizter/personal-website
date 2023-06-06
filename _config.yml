@@ -22,9 +22,7 @@ title: Samuel Granvik
 email: samuelgranvik@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my personal website! This website serves as the base for my portfolio, blog and other content.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.samuelgranvik.tech" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
 github_username: krullmizter
 
 # Build settings

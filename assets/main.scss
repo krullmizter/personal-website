@@ -4,8 +4,11 @@
 // Override, and copy the base styles from the theme stylesheet
 @import "{{ site.theme }}";
 
-.meta {
+.wrapper {
+    max-width: calc(1000px - (30px * 2));
+}
 
+.meta {
     margin-bottom: 5%;
 
     > h2 {
@@ -33,6 +36,6 @@ iframe {
     > div {
         display: block;
         width: 50%;
-        flex: 0 1 auto;
+        flex: 1 1 300px;
     }
 }

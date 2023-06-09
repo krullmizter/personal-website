@@ -1,0 +1,31 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: Home
+permalink: /
+---
+
+<h1>👋 Hi & Welcome To Me!</h1>
+
+<div class="home-info">
+  <h2>Samuel Granvik</h2> 
+  <a href="https://www.instagram.com/krullmizter/" target="_blank">@krullmizter</a>
+</div>
+
+<p>I'm a developer, nerd, dog lover and IT engineer from Finland.</p>
+
+<p>This website holds my personal interests, some <i>future</i> blog posts, and the base information of me, what I'm doing and what I'm interested in.</p>
+
+<p>This static website has been developed using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and it's hosted on my public GitHub, as a <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+
+<hr />
+
+<h2>Blog Posts</h2>
+
+{% for post in site.posts %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p>{{ post.date | date_to_string }}</p>
+  <p>{{ post.excerpt }}</p>
+{% endfor %}

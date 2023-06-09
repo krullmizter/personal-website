@@ -1,0 +1,22 @@
+---
+---
+
+// Override, and copy the base styles from the theme stylesheet
+@import "{{ site.theme }}";
+
+.home-info {
+
+    margin-bottom: 5%;
+
+    > h2 {
+        margin: 0;
+    }
+}
+
+hr {
+    margin: 5% 0;
+    border: 0;
+    height: 1px;
+    background: #e8e8e8;
+    
+}

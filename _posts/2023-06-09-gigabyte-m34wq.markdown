@@ -2,7 +2,7 @@
 layout: post
 title:  "Gigabyte M34WQ"
 date:   2023-06-09 10:30:02 +0300
-categories: tech-gear
+categories: hardware
 featured_image: /assets/images/m34wq.jpg
 ---
 

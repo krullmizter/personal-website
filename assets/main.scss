@@ -39,3 +39,30 @@ iframe {
         flex: 1 1 300px;
     }
 }
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    gap: 5px;
+
+    &-post {
+        max-width: 250px;
+        flex: 1 1 auto;
+
+        & a {
+            transition: .2s;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.pagination {
+    text-align: center;
+}

@@ -2,18 +2,6 @@
 layout: default
 ---
 
-<div class="meta">
-    <h1>{{ page.title }}</h1>
-    
-    <p>{{ page.date | date: "%B %d, %Y" }} · {% include time-to-read.html %}</p>
-    <p>Categories: {{ page.categories }}</p>
-
-    {% if page.featured_image %}
-        <img src="{{ page.featured_image }}" alt="Featured Image">
-    {% endif %}
-
-    <hr />
-</div>
-
+{% include post-description.html %}
 
 {{ content }}

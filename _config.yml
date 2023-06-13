@@ -29,7 +29,7 @@ github_username: krullmizter
 permalink: /:title
 
 # Pagination settings
-paginate: 2
+paginate: 3
 paginate_path: "/pages/blog-posts/page:num"
 
 # Build settings
@@ -42,6 +42,7 @@ plugins:
 header_pages:
   - pages/index.html
   - pages/blog-posts/index.html
+  - pages/bachelor-thesis.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.

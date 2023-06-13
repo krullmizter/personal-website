@@ -7,35 +7,22 @@ title: Blog
 
 <div class="blog-posts">
   {% for post in paginator.posts %}
-  <div class="blog-posts-post">
-    <a href="{{ post.url }}">
-      <h2><b>{{ post.title }}</b></h2>
+  <article class="blog-posts-post">
+      <h2>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h2>
       {% if post.featured_image %}
-        <img src="{{ post.featured_image }}" alt="Featured Image">
+        <div class="blog-posts-post-image" style="background-image: url(' {{ post.featured_image }}');"></div>
+      {% else %}
+        <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
       {% endif %}
       <hr />
-      <p>{{ post.date | date: "%B %d, %Y" }} · {% include time-to-read.html %}</p>
+      <p class="post-meta">{{ post.date | date_to_string }} · {% include time-to-read.html %}</p>
       <hr />
       <p>{{ post.excerpt }}</p>
     </a>
-  </div>
+  </article>
   {% endfor %}
 </div>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
+{% include pagination.html %}

@@ -1,28 +1,30 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 title: Home
 permalink: /
 ---
 
 <h1>👋 Hi & Welcome To Me!</h1>
+<h2>I'm an IT engineer, full-stack developer, nerd & dog lover from 🇫🇮</h2>
 
 <div class="meta">
   <h2>Samuel Granvik</h2> 
   <a href="https://www.instagram.com/krullmizter/" target="_blank">@krullmizter</a>
 </div>
 
-<p>I'm a developer, nerd, dog lover and IT engineer from Finland.</p>
-
-<p>This website holds my personal interests, some <i>future</i> blog posts, and the base information of me, what I'm doing and what I'm interested in.</p>
+<p>This website servers as the outlet for my personal interests, some <i>well crafted</i> blog posts, who I am, what I'm doing & what I'm interested in.</p>
 
 <p>This static website has been developed using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and it's hosted on my public GitHub, as a <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
 
 <hr />
 
-<h1>Recent Blog Posts</h1>
+<h2>Bachelor Thesis</h2>
+<h3>Open-source dog breed identification built with Fast.ai’s CNN using transfer learning 🐕</h3>
+Feel free to <a href="{% link pages/bachelor-thesis.md %}">read</a> about my bachelor thesis regarding: Deep-learning, dog breed identification, Fast.ai, Python and much more.
+
+<hr />
+
+<h2>Recent Blog Posts</h2>
 
 {% for post in site.posts limit: 3 %}
   <article class="meta">

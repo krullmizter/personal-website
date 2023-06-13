@@ -8,6 +8,31 @@
     max-width: calc(1000px - (30px * 2));
 }
 
+.intro {
+
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-image {
+        background-position: 100% 25%;
+        background-size: cover;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+    }
+
+    &-text {
+        max-width: 700px;
+    }
+
+    code {
+        display: block;
+    }
+}
+
 .meta {
     margin-bottom: 5%;
 

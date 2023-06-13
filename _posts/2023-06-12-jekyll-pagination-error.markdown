@@ -7,7 +7,7 @@ featured_image: /assets/images/jekyll-pagination.png
 excerpt_separator: <!--more-->
 ---
 
-TLDR
+TLDR:
 
 Change the name of your blog file from `blog.html` to `index.html`, and use the entire correct relative path in your config file. A tip, remember to restart your local development server when making changes to the `_config.yml` file.
 

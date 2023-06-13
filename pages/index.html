@@ -4,13 +4,9 @@ title: Home
 permalink: /
 ---
 
-<h1>👋 Hi & Welcome To Me!</h1>
-<h2>I'm an IT engineer, full-stack developer, nerd & dog lover from 🇫🇮</h2>
+<h1>👋 Hi & Welcome To Me! Samuel <a href="https://www.instagram.com/krullmizter/" target="_blank">@krullmizter</a></h1>
 
-<div class="meta">
-  <h2>Samuel Granvik</h2> 
-  <a href="https://www.instagram.com/krullmizter/" target="_blank">@krullmizter</a>
-</div>
+<h2>I'm an IT engineer, full-stack developer, nerd & dog lover from 🇫🇮</h2>
 
 <p>This website servers as the outlet for my personal interests, some <i>well crafted</i> blog posts, who I am, what I'm doing & what I'm interested in.</p>
 
@@ -18,20 +14,28 @@ permalink: /
 
 <hr />
 
-<h2>Bachelor Thesis</h2>
-<h3>Open-source dog breed identification built with Fast.ai’s CNN using transfer learning 🐕</h3>
+<h1>Bachelor Thesis</h1>
+<h2>Open-source dog breed identification built with Fast.ai’s CNN using transfer learning 🐕</h2>
 Feel free to <a href="{% link pages/bachelor-thesis.md %}">read</a> about my bachelor thesis regarding: Deep-learning, dog breed identification, Fast.ai, Python and much more.
 
 <hr />
 
-<h2>Recent Blog Posts</h2>
+<h1>Recent Blog Posts</h1>
 
-{% for post in site.posts limit: 3 %}
-  <article class="meta">
-    <h2>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <p class="post-meta">{{ post.date | date_to_string }}</p>
-    <p>{{ post.excerpt }}</p>
+<div class="blog-posts">
+  {% for post in site.posts limit: 3 %}
+  <article class="blog-posts-post">
+    <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
+      {% if post.featured_image %}
+        <div class="blog-posts-post-image" style="background-image: url(' {{ post.featured_image }}');"></div>
+      {% else %}
+        <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
+      {% endif %}
+      <p class="blog-posts-post-date">{{ post.date | date_to_string }} · {% include time-to-read.html %}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 200 }}  </p>
+    </a>
+    <hr />
   </article>
-{% endfor %}
+  {% endfor %}
+</div>

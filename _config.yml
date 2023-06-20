@@ -21,7 +21,9 @@
 title: Samuel Granvik
 email: samuelgranvik@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal website! This website serves as the base for my portfolio, blog and other content.
+  This website servers as a portfolio, 
+  digital CV, outlet for my personal interests & 
+  some well crafted and interesting blog posts.
 url: "https://www.samuelgranvik.tech" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: krullmizter
 
@@ -33,7 +35,7 @@ permalink: /:title
 
 # Pagination settings
 paginate: 6
-paginate_path: "/pages/blog-posts/page:num"
+paginate_path: "blog/page:num"
 
 # Build settings
 theme: minima
@@ -45,7 +47,7 @@ plugins:
 # Change the order of the items/pages in the navbar
 header_pages:
   - pages/index.html
-  - pages/blog-posts/index.html
+  - blog/index.html
   - pages/bachelor-thesis.md
 
 # Exclude from processing.

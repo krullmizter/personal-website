@@ -5,7 +5,6 @@ permalink: /
 ---
 
 <div class="intro">
-
   <div class="intro-wrapper">
     <div class="intro-image" style="background-image: url('/assets/images/profile.jpg');"></div>
   
@@ -14,7 +13,7 @@ permalink: /
     
       <h2>I'm an IT engineer, full-stack developer, nerd & dog lover from 🇫🇮</h2>
 
-      <p>This website servers as the outlet for my personal interests, some <i>well crafted</i> blog posts, who I am, what I'm doing & what I'm interested in.</p>
+      {{ site.description }}
     </div>
   </div>
 
@@ -24,8 +23,6 @@ permalink: /
   <code><b>Languages:</b> Ruby, PHP, Python, .NET, C#, C <br /><b>WebDev:</b>    WordPress, SCSS, JavaScript, Node.js, TypeScript, Vue.js, jQuery<br /><b>Databases:</b> Redis, MySQL, GraphQL, MongoDB</code>
   <br />
   <p>I do know other stuff as well, check out my <a href="https://github.com/krullmizter/" target="_blank">GitHub</a> and <a href="https://www.linkedin.com/in/samuel-granvik-93977013a/" target="_blank">LinkedIn</a> for more details.</p>
-  
-  <p>This static website is developed using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and it's hosted on my public GitHub, as a <a href="https://pages.github.com/" target="_blank">GitHub Page</a>.</p>
 </div>
 
 <hr />
@@ -46,4 +43,4 @@ permalink: /
   {% endfor %}
 </div>
 
-<a href="{% link pages/blog-posts/index.html %}" class="btn">More Blog Posts</a>
+<a href="{% link blog/index.html %}" class="btn">More Blog Posts</a>

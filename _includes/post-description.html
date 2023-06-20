@@ -8,7 +8,7 @@
             {% else %}
                 <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
             {% endif %}
-        
+
             <p>{{ post.date | date: "%B %d, %Y" }} &#183;
                 <span>
                 📖 {% assign words = post.content | split: " " | size %}
@@ -50,6 +50,10 @@
             <img src="{{ page.featured_image }}" alt="Featured Image"/>
         {% else %}
             <img src="{{ '../../assets/images/default-blog-post-image.jpg' }}" alt="Featured Image"/>
+        {% endif %}
+
+        {% if page.image-source %}
+            <p class="feature-image-source">Image source: {{ page.image-source }}</p>
         {% endif %}
     </div>
 {% endif %}

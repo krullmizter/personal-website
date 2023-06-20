@@ -1,6 +1,9 @@
 ---
 layout: default
+word_count:
 ---
+
+{% assign word_count = content | number_of_words %}
 
 {% include post-description.html %}
 

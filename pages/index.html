@@ -39,19 +39,9 @@ Feel free to <a href="{% link pages/bachelor-thesis.md %}">read</a> about my bac
 <h1>Recent Blog Posts</h1>
 
 <div class="blog-posts">
+  {% assign design = 'posts' %}
+  
   {% for post in site.posts limit: 3 %}
-  <article class="blog-posts-post">
-    <a href="{{ post.url }}">
-      <h2>{{ post.title }}</h2>
-      {% if post.featured_image %}
-        <div class="blog-posts-post-image" style="background-image: url(' {{ post.featured_image }}');"></div>
-      {% else %}
-        <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
-      {% endif %}
-      <p class="blog-posts-post-date">{{ post.date | date_to_string }} · {% include time-to-read.html %}</p>
-      <p>{{ post.excerpt | strip_html | truncate: 200 }}  </p>
-    </a>
-    <hr />
-  </article>
+    {% include post-description.html design=design %}
   {% endfor %}
 </div>

@@ -4,7 +4,8 @@ title:  "Gigabyte M34WQ"
 date:   2023-06-09 10:30:02 +0300
 categories: hardware
 featured_image: /assets/images/m34wq.jpg
-tldr: I recently bought the [Gigabyte 34" M34WQ](https://www.gigabyte.com/Monitor/M34WQ#kf), a 144hz, 1440p monitor. This monitor is huge when it comes to my tiny MacBook Pro 16" screen. The main selling point of this monitor was the non-curved wide screen. I plan on using this screen vertically to display all my code. I have a 32" curved monitor as well, and I'll be interesting to see how well they compare and work together.
+image-source: https://www.rtings.com/monitor/reviews/gigabyte/m34wq
+tldr: I recently bought the Gigabyte 34" M34WQ, a 144hz, 1440p monitor. This monitor is huge when it comes to my tiny MacBook Pro 16" screen. The main selling point of this monitor was the non-curved wide screen. I plan on using this screen vertically to display all my code. I have a 32" curved monitor as well, and I'll be interesting to see how well they compare and work together.
 ---
 
 The second selling point of this monitor was the built in [KVM](https://en.wikipedia.org/wiki/KVM_switch) switch. I can now connect my wireless mouse and keyboard to the USB ports in the back of the monitor, as well as a displayport, and USB-B cable to my main gaming PC, and connect a USB-C / Thunderbolt cable to and from my MacBook to the monitor. With one easy button click I can switch the USB, and video inputs between either my main PC and my Mac, isn't that just great!  

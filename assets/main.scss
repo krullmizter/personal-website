@@ -4,11 +4,6 @@
 // Override, and copy the base styles from the theme stylesheet
 @import "{{ site.theme }}";
 
-a,
-a:visited {
-    color: #111;
-}
-
 a.btn {
     font-weight: 500;
     text-transform: uppercase;

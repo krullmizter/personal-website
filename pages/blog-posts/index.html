@@ -6,19 +6,10 @@ title: Blog
 <h1>All Blog Posts</h1>
 
 <div class="blog-posts">
+  {% assign design = 'posts' %}
+  
   {% for post in paginator.posts %}
-  <article class="blog-posts-post">
-    <a href="{{ post.url }}">
-      <h2>{{ post.title }}</h2>
-      {% if post.featured_image %}
-        <div class="blog-posts-post-image" style="background-image: url(' {{ post.featured_image }}');"></div>
-      {% else %}
-        <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
-      {% endif %}
-      <p class="blog-posts-post-date">{{ post.date | date_to_string }} &#183; {% include time-to-read.html %}</p>
-      <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    </a>
-  </article>
+    {% include post-description.html design=design %}
   {% endfor %}
 </div>
 

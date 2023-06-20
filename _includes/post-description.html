@@ -1,12 +1,51 @@
-<div class="post-description">
-    <h1>{{ page.title }}</h1>
-    
-    <p>{{ page.date | date: "%B %d, %Y" }} &#183; {% include time-to-read.html %}</p>
-    <p>Categories: {{ page.categories }}</p>
+{% if design == "posts" %}
+    <article class="blog-posts-post">
+        <a href="{{ post.url }}">
+            <h2>{{ post.title }}</h2>
+            
+            {% if post.featured_image %}
+                <div class="blog-posts-post-image" style="background-image: url(' {{ post.featured_image }}');"></div>
+            {% else %}
+                <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
+            {% endif %}
+        
+            <p>{{ post.date | date: "%B %d, %Y" }} &#183;
+                <span>
+                📖 {% assign words = post.content | split: " " | size %}
+                {% if words < 360 %}
+                    1 min
+                {% else %}
+                    {{ words | divided_by: 180 }} mins
+                {% endif %}
+                </span>
+            </p>
+        
+            <p>{{ post.excerpt | strip_html | truncate: 200 }}  </p>
+        </a>
+        <hr />
+    </article>
 
-    {% if page.featured_image %}
-        <img src="{{ page.featured_image }}" alt="Featured Image">
-    {% endif %}
+{% else %}
+    <div class="post-description">
+        <h1>{{ page.title }}</h1>
 
-    <hr />
-</div>
+        <p>{{ page.date | date: "%B %d, %Y" }} &#183;
+            <span>
+            📖 {% assign words = page.content | split: " " | size %}
+            {% if words < 360 %}
+                1 min
+            {% else %}
+                {{ words | divided_by: 180 }} mins
+            {% endif %}
+            </span>
+        </p>
+
+        <p>Categories: {{ page.categories }}</p>
+
+        {% if page.featured_image %}
+            <img src="{{ page.featured_image }}" alt="Featured Image"/>
+        {% else %}
+            <img src="{{ '../../assets/images/default-blog-post-image.jpg' }}" alt="Featured Image"/>
+        {% endif %}
+    </div>
+{% endif %}

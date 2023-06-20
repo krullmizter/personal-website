@@ -4,15 +4,7 @@ title:  "Jekyll Pagination Error"
 date:   2023-06-12 10:30:02 +0300
 categories: jekyll
 featured_image: /assets/images/jekyll-pagination.png
-excerpt_separator: <!--more-->
----
-
-TLDR:
-
-Change the name of your blog file from `blog.html` to `index.html`, and use the entire correct relative path in your config file. A tip, remember to restart your local development server when making changes to the `_config.yml` file.
-
-
-<!--more-->
+tldr: Change the name of your blog file from `blog.html` to `index.html`, and use the entire correct relative path in your config file. A tip, remember to restart your local development server when making changes to the `_config.yml` file.
 ---
 
 I tried, and tried, and tried to get the built in pagination to work with Jekyll. I followed the official [guide]("https://jekyllrb.com/docs/pagination/") but to no help. Well we all need to carefully read the documentation and check what permalinks we pass on to our configuration files before we begin to smash our keyboards to bits and pieces.

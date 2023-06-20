@@ -32,7 +32,7 @@ minima:
 permalink: /:title
 
 # Pagination settings
-paginate: 3
+paginate: 6
 paginate_path: "/pages/blog-posts/page:num"
 
 # Build settings

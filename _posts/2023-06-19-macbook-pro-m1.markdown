@@ -4,15 +4,8 @@ title:  "MacBook M1 Pro (2021)"
 date:   2023-06-19 18:30:02 +0300
 categories: hardware
 featured_image: /assets/images/mac-m1-pro.jpg
-excerpt_separator: <!--more-->
----
+tldr: The M1 Pro (2021) is a great option for developers and individuals who wants a powerful, multi-functional machine. It is a bit pricy, heavy, I dislike the MacBook keyboard and some software can't run out of the box on the new M1 CPU.
 
-TLDR:
-
-The M1 Pro (2021) is a great option for developers and individuals who wants a powerful, multi-functional machine. It is a bit pricy, heavy, I dislike the MacBook keyboard and some software can't run out of the box on the new M1 CPU.
-
-
-<!--more-->
 ---
 
 I've for a couple of months been using the [16" Apple MacBook M1 Pro (2021)](https://www.apple.com/macbook-pro-14-and-16/). All-in-all its a great machine, that can handle multi-tasking very well, without throttling but at a hight price tag. Since I got the laptop I've had it connected to my [Gigabyte M34WQ](/gigabyte-m34wq) ultra widescreen monitor.

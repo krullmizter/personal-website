@@ -19,8 +19,12 @@
                 {% endif %}
                 </span>
             </p>
-        
-            <p>{{ post.excerpt | strip_html | truncate: 200 }}  </p>
+
+            {% if post.tldr %}
+                <p>{{ post.tldr | strip_html | truncate: 200 }} </p>
+            {% else %}
+                <p>{{ post.excerpt | strip_html | truncate: 200 }} </p>
+            {% endif %}
         </a>
         <hr />
     </article>

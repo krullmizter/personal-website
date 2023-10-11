@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Master's program"
+date:   2023-10-11 18:30:02 +0300
+categories: education
+featured_image: /assets/images/akademi.jpg
+image-source: https://www.studyopportunities.online/
+tldr: This fall, I started my master's program in computer engineering at Åbo Akademi University, with an expected graduation date in 2025.
+
+---
+
+I've really enjoyed this new academic journey. Continuing my studies in a field that is relevant to my interests has worked well for me.
+
+I've been balancing my master's studies alongside my work as a systems developer, and I intend to continue doing so throughout this academic journey. Working alongside one's studies, especially in my case, focusing on systems development, significantly enhances both practical and theoretical knowledge. Utilizing one's academic expertise in their professional career is another significant advantage of pursuing advanced educational opportunities.
+
+The current educational system may not be as cutting-edge as the "real world." Therefore, I believe that combining academic and professional experiences is a valuable approach.
+
+I find the coursework manageable, as it aligns closely with my previous work experiences.
+
+I am particularly looking forward to my master's thesis, and I hope to align it with my current employer.
+
+[Read more](https://www.abo.fi/en/study-subject/computer-engineering/){:target="_blank"} about the computer engineering major subject

@@ -8,7 +8,7 @@ image-source: https://blog.webjeda.com/jekyll-pagination/
 tldr: Change the name of your blog file from `blog.html` to `index.html`, and use the entire correct relative path in your config file. A tip, remember to restart your local development server when making changes to the `_config.yml` file.
 ---
 
-I tried, and tried, and tried to get the built in pagination to work with Jekyll. I followed the official [guide]("https://jekyllrb.com/docs/pagination/") but to no help. Well we all need to carefully read the documentation and check what permalinks we pass on to our configuration files before we begin to smash our keyboards to bits and pieces.
+I tried, and tried, and tried to get the built in pagination to work with Jekyll. I followed the official [guide]("https://jekyllrb.com/docs/pagination/"){:target="_blank"} but to no help. Well we all need to carefully read the documentation and check what permalinks we pass on to our configuration files before we begin to smash our keyboards to bits and pieces.
 All my pages are all inside a pages folder directly at the root. I then have a blog page that holds all the created blog posts, I wanted to use pagination on that page to not create an infinite scroll of blog posts. However the first mistake I made is that with Jekyll pagination is only works on an `index.html` file. So to solve that I moved my `blog.html` inside a folder called `blog`, and renamed the `blog.html` to `index.html`.
 
 However this error message appeared in the console when I ran bundle exec jekyll serve

@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Initial thoughts on Fedora 38"
+date:   2023-10-24 21:05:02 +0300
+categories: software
+featured_image: /assets/images/fedora.jpg
+image-source: https://www.zdnet.com/article/fedora-38-beta-has-arrived-and-it-heralds-a-spectacular-upcoming-release/
+tldr: I've always liked to work with UNIX based OSs, I don't know as a developer one almost always gets to work with some form of UNIX.
+
+---
+ As a purebred Finn I have to use Linux, and Fedora has been my personal favorite for dual-booting these last years. I don't know why, but I guess I just like the look and feel of the distro. I've used Debian based distros before such as Mint but I've not found them to be as well suited towards my personal preferences. Not to look down on Debian based distros, they are great in their own way! 
+
+I also think I've always preferred GNOME over KDE and the others, I don't know, maybe its my newbie Linux skills or overuse of Windows but I like GNOME in its shining armour. It takes a bit more system resources, and it can be a bit lackluster out of the box, but with some modding and tweaking one can get quite artistic.
+
+Fedora 38 is as stable as you can get, I mean the entire installation process to now me using it took as little as 15 minutes. Yes I've installed 100 different Linux systems, but compared to Windows setup, Linux beats it fair and square.
+
+I do believe that the ease of use for me and many others are the third party addons, RPM packages and Flatpak that in the end makes the usage of Fedora and Linux systems overall more usable today. I had a hard time installing and using packages and applications when I began to use Linux as a side OS besides my main Windows installation. This was 10 years ago, but the main issue with Linux still is the somewhat steep learning curve. I mean I can brag about my computer engineering degree and years of development to guide me in my Linux struggles, but if I were to ask my mum to install and use Linux she would freak out. But Linux maybe isn't meant to be distrusted towards the mainstream everyday Joe, or maybe it is and I've just used the wrong distros (not including Arch BTW). Ubuntu has had quite some success in that sense, that "mortals" have been able to install and use the distro. I can only remember the YouTube video of the girl who had to drop out of collage due to her having to use Linux (I think it was Ubuntu). [Video](https://www.youtube.com/watch?v=5Qj8p-PEwbI){:target="_blank"}
+
+I'd recommend that if you are a somewhat competent computer user, and you are interested in Linux, then try to dual boot Linux with your main OS and aim for a distro like Fedora, Mint among others. Here's a list of popular [distros](https://distrowatch.com/dwres.php?resource=major){:target="_blank"}
+
+When you become good at using Linux (I'm not saying I am), you will begin to see its possibilities, and how it can be used properly to do all sort of things.
+
+Some major changes from 37 - 38
+- Microdnf was changed out to dnf5, which is a lot more lightweight
+- The lovely GNOME 44, uhhh so shiny!
+- Unrestricted Flathub access
+- Using Linux kernel 6.2
+- New window manager Sway
+
+And many more things...
+
+But in the end I'll stick with Fedora for now, and await all the hate emails :)

@@ -1,5 +1,5 @@
 # My personal website
-### Built using Jekyll as a static website, and hosted on GitHub pages
+### Built using Jekyll as a static website, hosted & deployd on GitHub pages using GitHub actions
 
 https://www.samuelgranvik.tech/
 

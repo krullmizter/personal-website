@@ -1,8 +1,9 @@
 ---
 ---
 
-// Override, and copy the base styles from the theme stylesheet
-@import "{{ site.theme }}";
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
 
 a.btn {
     font-weight: 600;

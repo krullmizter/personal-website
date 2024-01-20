@@ -1,12 +1,6 @@
 ---
 ---
 
-*, 
-*::before, 
-*::after{
-    box-sizing: border-box;
-}
-
 * {
     margin: 0; 
     padding: 0;
@@ -153,11 +147,28 @@ a.btn {
 
     code {
         display: block;
+        font-size: 17.5px;
+        padding: 10px;
     }
 }
 
 .post-description {
     margin-bottom: 15px;
+
+    &-info {
+        list-style: none;
+        margin-left: 0;
+
+        li:first-child {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        li {
+            font-size: 13px;
+            font-weight: 300;
+        }
+    }
 }
 
 .meta {
@@ -244,11 +255,6 @@ iframe {
     font-size: 13px;
     color: #828282;
     font-style: italic;
-}
-
-code {
-    font-size: 17.5px;
-    padding: 10px;
 }
 
 .blog-posts-post h3 {

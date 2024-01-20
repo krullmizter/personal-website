@@ -32,18 +32,31 @@
     <div class="post-description">
         <h1>{{ page.title }}</h1>
 
-        <p>{{ page.date | date: "%B %d, %Y" }} &#183;
-            <span>
-            📖 {% assign words = page.content | split: " " | size %}
-            {% if words < 360 %}
-                1 min
-            {% else %}
-                {{ words | divided_by: 180 }} mins
-            {% endif %}
-            </span>
-        </p>
+        <ul class="post-description-info">
+            <li>
+                {{ page.date | date: "%B %d, %Y" }} &#183;
+                <span>
+                📖 {% assign words = page.content | split: " " | size %}
+                {% if words < 360 %}
+                    1 min
+                {% else %}
+                    {{ words | divided_by: 180 }} mins
+                {% endif %}
+                </span>
+            </li>
 
-        <p>Categories: {{ page.categories }}</p>
+            <li>
+                Categories: {{ page.categories }}
+            </li>
+
+            <li>
+                Tags:
+            {% for tag in page.tags %}
+              <span>{{ tag }}</span>
+              {% unless forloop.last %} {% endunless %}
+            {% endfor %}
+            </li>
+        </ul>      
 
         {% if page.featured_image %}
             <img src="{{ page.featured_image }}" alt="Featured Image"/>

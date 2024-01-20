@@ -56,47 +56,62 @@ body, html{
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
-::-moz-selection { /* Code for Firefox */
-  color: #fff;
-  background: #00B700;
+$green-primary: #00B700;
+$green-secondary: #32C532;
+$grey-primary: #bbbbbb;
+$grey-dark: #404040;
+$white: #ffffff;
+$black: #181818;
+$code-bg: rgb(33, 33, 33);
+
+::-moz-selection {
+  color: $white;
+  background: $green-primary;
 }
 
 ::selection {
-  color: #fff;
-  background: #00B700;
+  color: $white;
+  background: $green-primary;
+}
+
+a.site-title {
+    font-weight: 600;
+    transition: .2s;
+
+    &:hover {
+        color: $white;
+        transition: .2s;
+        text-decoration: none;
+    }
 }
 
 a,
 a:visited {
-    color: #00B700;
+    color: $green-primary;
     transition: .2s;
 }
 
 a:hover {
-    color: #32C532;
+    color: $green-secondary;
     transition: .2s;
     text-decoration: none;
-}
-
-.site-title {
-    font-weight: 400;
 }
 
 a.btn {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
-    border: 2px solid ;
-    border-radius: 5px;
+    border: 2px solid;
+    border-radius: 3px;
     padding: 5px;
-    color: #bbbbbb;
+    color: $grey-primary;
     text-decoration: none;
     transition: .2s;
 
     &:hover {
-        background-color: #bbbbbb;
-        color: #181818;
-        border-color: #bbbbbb;
+        background-color: $green-primary;
+        border-color: $green-primary;
+        color: $white;
     }
 
     &::after {
@@ -183,7 +198,7 @@ hr {
     margin: 25px 0;
     border: 0;
     height: 1px;
-    background: #e8e8e8;
+    background: $grey-dark;
 }
 
 iframe {
@@ -194,12 +209,20 @@ iframe {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
     color: #828282;
 
     > div {
-        display: block;
+        display: flex;
         width: 50%;
         flex: 1 1 300px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    p:last-child {
+        margin: 0;
     }
 }
 
@@ -262,6 +285,12 @@ iframe {
 }
 
 a.page-link:hover {
-    color: #fff;
+    color: $white;
     transition: .2s;
+}
+
+.site-header,
+.site-nav,
+.site-footer {
+    background-color: $code-bg;
 }

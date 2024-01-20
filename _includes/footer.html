@@ -6,19 +6,21 @@
       <div class="footer">
         <div>
           <ul class="contact-list">
-            <li class="p-name">{{ site.title | escape }} © {{ 'now' | date: "%Y" }}</li>
             <li>
-                <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+                <a href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope"></i> {{ site.email }}</a>
+            </li>
+            <li>
+              <a href="https://github.com/krullmizter" target="_blank"><i class="fa-brands fa-github"></i> krullmizter</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/samuel-granvik-93977013a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> Samuel Granvik</a>
             </li>
           </ul>
-
-          <div class="social-links">
-            {%- include social.html -%}
-          </div>
         </div>
         <div>
           <p>{{ site.description | escape }}</p>
           <p>Built using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & Hosted on<a href="https://pages.github.com/" target="_blank"> GitHub Pages</a>.</p>
+          <p>{{ site.title | escape }} © {{ 'now' | date: "%Y" }}</p>
         </div>
       </div>
     </div>

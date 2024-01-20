@@ -41,7 +41,8 @@ There are two key types of DNS resolvers:
     * Public resolvers are handled by bugger entities such as: Google, Cloudflare, NextDNS etc. These public ones can use encryption when resolving the DNS queries.
 
 ![Resolvers](/assets/images/dns-resolver.png)
-[Source](https://www.researchgate.net/figure/Domain-resolution-process-with-a-recursive-resolver_fig1_330006223)
+
+[Image source](https://www.researchgate.net/figure/Domain-resolution-process-with-a-recursive-resolver_fig1_330006223)
 
 <hr />
 
@@ -81,7 +82,7 @@ There are several services that offer encrypted/private DNS queries via public r
 
 These resolvers can also deliver additional services such as: adblocking, parental control, customizable filtering etc.
 
-I've personally used NextDNS for quite some time. It lets me both encrypt, filter DNS requests, and block trackers, ads and other content on a DNS and network level. It let's me choose filters that are made up of websites and content that is seen as: adware, spyware, clickbait, popups etc. By having these filters on a DNS level, I can apply these settings to my entire home, rather than just installing uBlock (an adblocker) on each webbrowser. This will also stop trackers on non-webbrowser software, such as our smart TV, PS5 etc.
+I've personally used [NextDNS](https://nextdns.io/){:target="_blank"} for quite some time. It lets me both encrypt, filter DNS requests, and block trackers, ads and other content on a DNS and network level. It let's me choose filters that are made up of websites and content that is seen as: adware, spyware, clickbait, popups etc. By having these filters on a DNS level, I can apply these settings to my entire home, rather than just installing uBlock (an adblocker) on each webbrowser. This will also stop trackers on non-webbrowser software, such as our smart TV, PS5 etc.
 
 The pros I find for using a service/public resolver like NextDNS are:
 

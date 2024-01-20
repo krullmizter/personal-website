@@ -1,7 +1,8 @@
 ---
 layout: base
-title: Bachelor Thesis
+title: Bachelor's Thesis
 permalink: /bachelor-thesis
+icon: fa-solid fa-graduation-cap
 ---
 
 # Open-source dog breed identification built with Fast.ai's CNN using transfer learning 🐕

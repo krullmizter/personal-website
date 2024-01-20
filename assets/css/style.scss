@@ -1,9 +1,76 @@
 ---
 ---
 
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+img, 
+picture, 
+svg, 
+video, 
+canvas {
+    max-width: 100%; 
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+input, 
+button, 
+textarea, 
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce){
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none;
+    }
+}
+
+body, html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #00B700;
+}
+
+::selection {
+  color: #fff;
+  background: #00B700;
+}
 
 a,
 a:visited {
@@ -14,6 +81,7 @@ a:visited {
 a:hover {
     color: #32C532;
     transition: .2s;
+    text-decoration: none;
 }
 
 .site-title {
@@ -55,6 +123,11 @@ a.btn {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
     }
 
     &-image {
@@ -67,6 +140,15 @@ a.btn {
 
     &-text {
         max-width: 700px;
+    }
+
+    &-info {
+        font-size: 18px;
+
+        ul {
+            margin-left: 0;
+            list-style: none;
+        }
     }
 
     code {
@@ -171,4 +253,9 @@ code {
 
 .blog-posts-post h3 {
     font-weight: 600;
+}
+
+a.page-link:hover {
+    color: #fff;
+    transition: .2s;
 }

@@ -15,3 +15,16 @@ icon: fa-solid fa-newspaper
 </div>
 
 {% include pagination.html %}
+
+<script>
+  function filterPosts(tag) {
+  var posts = document.querySelectorAll('.post');
+  posts.forEach(function(post) {
+    if (post.getAttribute('data-tags').split(' ').includes(tag) || tag === 'all') {
+      post.style.display = '';
+    } else {
+      post.style.display = 'none';
+    }
+  });
+}
+</script>

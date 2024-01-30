@@ -1,5 +1,5 @@
 {% if design == "posts" %}
-    <article class="blog-posts-post">
+    <article class="blog-posts-post" data-tags="{{ post.tags | join: ' ' }}">
         <a href="{{ post.url }}">
             <h3>{{ post.title }}</h3>
             

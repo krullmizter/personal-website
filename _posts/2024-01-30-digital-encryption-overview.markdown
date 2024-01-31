@@ -45,7 +45,6 @@ Yes, just some small amount of history:
 3. Enigma: The enigma machine was used during WW2 to conceal the communication of Nazi Germany's military communications. The cracking of the enigma led to the invention of the electric computer.
 4. AES etc: More advanced encryption algorithms and tools has been developed since the modern internet age has developed, alongside developments in warfare, banking, personal privacy etc.
 
-
 <hr />
 
 ## Encryption keys
@@ -63,11 +62,11 @@ The size of the key is "key" to the foundational safety of a encryption algorith
 
 There are often two types of encryption algorithms umbrella terms:
 
-* Symmetric (shared-key)
+* Symmetric (Private-key cryptography)
     * We use one key to both encrypt and decrypt the data
     * Pros: Takes less computational power to do as it uses the same key for both encryption, and decryption.
     * Cons: If a bad actor gets hand of the cryptographic key they will have access to the plaintext data.
-* Asymmetric (public-private-key)
+* Asymmetric (Public-key cryptography)
     * It uses two different keys to encrypt and decrypt the data. One key is public (encryption), and shared by all parties. The private key (decrypt) are individual and used to decrypt the encrypted data.
     * Pros: Can be seen as safer, and more secure due to its innate nature of being harder to crack. Can be used with digital signatures. Easy to distribute public keys openly whilst not compromising security.
     * Cons: Uses more computational power to implement and use. Often not used with large datasets. One also need to handle the sharing, storage and usages of all the keys.
@@ -86,10 +85,18 @@ Types of encryption algorithms:
 
 <hr />
 
+## E2EE
+
+End-to-end encryption (E2EE) is a standard that is used in modern IT systems, and it's a more secure and privacy focused way to send and receive data. E2EE is often using both asymmetric and symmetric algorithms and tools to create a unified, complete and ease to use service to ensure confidentiality and integrity. (I plan on writing more about E2EE in another blog post, stay tuned.)
+
+<hr />
+
 ## Problems
 One of the biggest issues that we are going to face in regards to encryption and data privacy/security, is the rise of... yes you guessed right: AI and quantum computers. These systems can in the near future be able to crack some of the mathematical algorithms and technologies that relies on strong encryption to secure our data.
 
 We also have the issue of old, and unsecure encryption standards and algorithms. We have seen attacks, and exploits pop-up ever so often when a company, or systems has used improper encryption tools, standards or techniques, and it has led to data leaks and just bad things.
+
+<hr />
 
 ## Conclusion
 

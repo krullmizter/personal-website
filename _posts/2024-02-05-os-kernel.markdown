@@ -2,7 +2,7 @@
 layout: post
 title: "OS Kernel"
 date: 2024-02-05 18:30:00 +0300
-categories: operating system
+categories: operating-system
 tags: [operating system, cyber security, hardware]
 featured_image: /assets/images/os.png
 image-source: https://chat.openai.com

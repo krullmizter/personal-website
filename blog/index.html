@@ -19,12 +19,10 @@ icon: fa-solid fa-newspaper
 <div class="blog-posts">
   {% assign design = 'posts' %}
   
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
     {% include post-description.html design=design %}
   {% endfor %}
 </div>
-
-{% include pagination.html %}
 
 <script>
   document.querySelectorAll('.tag').forEach(tagButton => {

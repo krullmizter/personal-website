@@ -33,9 +33,6 @@ minima:
   
 permalink: /:title
 
-paginate: 6
-paginate_path: "blog/page:num"
-
 # Build settings
 plugins:
   - jekyll-feed

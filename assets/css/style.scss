@@ -133,6 +133,7 @@ a.btn {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        gap: 20px;
 
         ul {
             list-style: none;
@@ -158,6 +159,7 @@ a.btn {
         h1 {
             font-family: 'Courier New', Courier, monospace;
             font-size: 45px;
+            line-height: 45px;
             margin-bottom: 0;
         }
     }

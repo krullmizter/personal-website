@@ -61,8 +61,7 @@ The kernel is one of the first processes/programs that gets loaded into the work
 
 The kernel uses a type of table to keep track of all running processes.
 
-![kernel](/assets/images/data_center-kernel_layout.png)
-[Image source](https://www.techtarget.com/searchdatacenter/definition/kernel)
+{% include image-source.html image_path="/assets/images/data_center-kernel_layout.png" alt_text="kernel" image_src="https://www.techtarget.com/searchdatacenter/definition/kernel" %}
 
 <hr />
 
@@ -126,5 +125,4 @@ So we've looked at a more simpler view of the kernel and its operations in moder
 
 It is very difficult to bring up all the information about kernels, the OS, and other lower level concepts in just blog post. But I hope that I'll be able to write more about all of these concepts as time goes on. I'll want to bring up concept such as: TPM, sandboxing, RAM, CPU, multi-threading, the BIOS etc., in more detail, but for now this is all, thank you for reading!
 
-![popcorn](/assets/images/popcorn.gif)
-[Image source](https://tenor.com/view/popcorn-gif-26924114)
+{% include image-source.html image_path="/assets/images/popcorn.gif" alt_text="popcorn" image_src="https://tenor.com/view/popcorn-gif-26924114" %}

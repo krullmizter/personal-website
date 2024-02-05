@@ -298,3 +298,19 @@ a.page-link:hover {
 .site-footer {
     background-color: $code-bg;
 }
+
+.tags {
+    padding: 10px;
+    background-color: $grey-dark;
+    color: $grey-primary;
+    border-radius: 5px;
+    border: none;
+
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}

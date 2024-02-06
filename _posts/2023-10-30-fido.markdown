@@ -3,7 +3,7 @@ layout: post
 title: "MFA & FIDO"
 date: 2023-10-30 10:30:02 +0300
 categories: security
-tags: [MFA, passwords]
+tags: [2fa, passwords]
 featured_image: /assets/images/mfa.jpg
 image-source: https://www.hsph.harvard.edu/information-technology/2022/10/03/october-is-cybersecurity-month-week-1/
 tldr: What is FIDO2? Well, FIDO stands for Fast Identity Online. It is an open-source authentication standard, and its main goals are to improve online security, mainly via user authentication processes. There is a group, or alliance, called the FIDO Alliance, which is made up of various tech companies that come together to develop these processes, best practices, and standards.

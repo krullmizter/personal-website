@@ -60,6 +60,7 @@ $green-primary: #00B700;
 $green-secondary: #32C532;
 $grey-primary: #bbbbbb;
 $grey-dark: #404040;
+$grey-darkest: #212121;
 $white: #ffffff;
 $black: #181818;
 $code-bg: rgb(33, 33, 33);
@@ -141,10 +142,6 @@ a.btn {
         }
     }
 
-    h1 {
-        font-weight: 600;
-    }
-
     &-image {
         background-position: 100% 25%;
         background-size: cover;
@@ -157,10 +154,11 @@ a.btn {
         max-width: 700px;
 
         h1 {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Courier New', Courier, monospace, 'Brush Script MT', cursive;
             font-size: 45px;
+            font-weight: 600;
             line-height: 45px;
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
     }
 
@@ -245,6 +243,7 @@ iframe {
     justify-content: space-between;
     align-content: center;
     gap: 25px;
+    margin-bottom: 15px;
 
     &-post {
         flex: 1 1 25%;
@@ -259,16 +258,26 @@ iframe {
             }
         }
 
+        &-description {
+            background-color: $grey-darkest;
+            padding: 15px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
         &-image {
             background-size: cover;
             background-position: center;
             width: 100%;
             height: 200px;
-            margin-bottom: 15px;
         }
 
         &-date {
             margin: 15px 0;
+        }
+
+        & p:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -323,4 +332,17 @@ a.page-link:hover {
         align-items: baseline;
     }
 }
-  
+
+.post-share {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    a {
+        margin: 0 5px;
+    }
+    
+    p {
+        margin-bottom: 0;
+    }
+}

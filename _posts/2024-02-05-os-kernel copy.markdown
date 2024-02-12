@@ -3,7 +3,7 @@ layout: post
 title: "OS Kernel"
 date: 2024-02-05 18:30:00 +0300
 categories: operating-system
-tags: [operating system, cyber security, hardware]
+tags: [operating system, cybersecurity, hardware]
 featured_image: /assets/images/os.png
 image-source: https://chat.openai.com
 tldr: An operating system uses a kernel to communicate with the hardware of its host machine. Let's dive deeper into its operations and its functions.

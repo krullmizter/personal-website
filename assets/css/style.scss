@@ -181,6 +181,12 @@ a.btn {
 .post-description {
     margin-bottom: 15px;
 
+    h1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
     &-info {
         list-style: none;
         margin-left: 0;
@@ -194,6 +200,22 @@ a.btn {
             font-size: 16px;
             font-weight: 300;
         }
+    }
+
+    &-badge {
+        text-transform: capitalize;
+        display: inline-block;
+        padding: 5px;
+        color: $white;
+        background-color: $grey-dark;
+        font-size: 50%;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 7.5px;
+        margin-left: 10px;
     }
 }
 
@@ -337,6 +359,7 @@ a.page-link:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 
     a {
         margin: 0 5px;

@@ -4,12 +4,16 @@ word_count:
 image-source:
 ---
 
-{% assign tldr = post.tldr %}
+<div class="post-meta">
+    {% assign tldr = post.tldr %}
 
-{% assign word_count = content | number_of_words %}
+    {% assign word_count = content | number_of_words %}
 
-{% include post-description.html %}
+    {% include post-description.html %}
 
-<b>{{ page.tldr }}</b>
-<br><br>
-{{ content }}
+    <b>{{ page.tldr }}</b>
+
+    <hr />
+</div>
+
+<div class="post-content">{{ content }}</div>

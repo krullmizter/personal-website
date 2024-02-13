@@ -32,7 +32,13 @@
 
 {% else %}
     <div class="post-description">
-        <h1>{{ page.title }} <span class="post-description-badge">{{ page.categories }}</span></h1>
+        <h1>
+            {{ page.title }}
+
+            {% if page.categories.size > 0 %}
+                <span class="post-description-badge">{{ page.categories }}</span>
+            {% endif %}
+        </h1>
 
         <ul class="post-description-info">
             <li>
@@ -46,13 +52,14 @@
                 {% endif %}
                 </span>
             </li>
-
-            <li>
-                Tags:
-            {% for tag in page.tags %}
-              <span>{{ tag }}</span>{% unless forloop.last %}<span>,</span>{% endunless %}
-            {% endfor %}
-            </li>
+            
+            {% if page.tags and page.tags.size > 0 %}
+                <li> Tags:
+                    {% for tag in page.tags %}
+                    <span>{{ tag }}</span>{% unless forloop.last %}<span>,</span>{% endunless %}
+                    {% endfor %}
+                </li>
+            {% endif %}
         </ul>
 
         <div class="post-share">

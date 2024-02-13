@@ -32,7 +32,7 @@
 
 {% else %}
     <div class="post-description">
-        <h1>{{ page.title }}</h1>
+        <h1>{{ page.title }} <span class="post-description-badge">{{ page.categories }}</span></h1>
 
         <ul class="post-description-info">
             <li>
@@ -48,20 +48,15 @@
             </li>
 
             <li>
-                Categories: {{ page.categories }}
-            </li>
-
-            <li>
                 Tags:
             {% for tag in page.tags %}
-              <span>{{ tag }}</span>
-              {% unless forloop.last %} {% endunless %}
+              <span>{{ tag }}</span>{% unless forloop.last %}<span>,</span>{% endunless %}
             {% endfor %}
             </li>
         </ul>
 
         <div class="post-share">
-            <p>Share Post:</p>
+            <p>Share:</p>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}" target="_blank"><i class="fa fa-linkedin fa"></i></a>
         </div>
 

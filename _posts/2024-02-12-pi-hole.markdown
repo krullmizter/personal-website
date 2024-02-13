@@ -2,7 +2,6 @@
 layout: post
 title: "Pi-hole"
 date: 2024-02-12 17:30:00 +0300
-categories: privacy
 tags: [hardware, privacy, tips]
 featured_image: /assets/images/pihole.png
 image-source: https://cdcloudlogix.com/simple-guide-pi-hole-on-raspberry-pi-with-ipv6/

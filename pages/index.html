@@ -37,7 +37,7 @@ icon: fa-solid fa-house
 <div class="blog-posts">
   {% assign design = 'posts' %}
   
-  {% for post in site.posts limit: 3 %}
+  {% for post in site.posts limit: 6 %}
     {% include post-description.html design=design %}
   {% endfor %}
 </div>

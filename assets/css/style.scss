@@ -315,10 +315,18 @@ iframe {
 }
 
 .image-source {
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-height: 500px;
-    max-height: 1000px;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .pagination {

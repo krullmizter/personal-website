@@ -181,10 +181,18 @@ a.btn {
 .post-description {
     margin-bottom: 15px;
 
-    h1 {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+    &-heading {
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-weight: 300;
+            font-style: italic;
+        }
     }
 
     &-info {
@@ -216,6 +224,10 @@ a.btn {
         vertical-align: baseline;
         border-radius: 7.5px;
         margin-left: 10px;
+    }
+
+    hr {
+        margin: 10px 0;
     }
 }
 

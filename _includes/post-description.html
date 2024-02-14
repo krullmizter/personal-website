@@ -32,13 +32,21 @@
 
 {% else %}
     <div class="post-description">
-        <h1>
-            {{ page.title }}
-
-            {% if page.categories.size > 0 %}
-                <span class="post-description-badge">{{ page.categories }}</span>
+        <div class="post-description-heading">
+            <h1>
+                {{ page.title }}
+    
+                {% if page.categories.size > 0 %}
+                    <span class="post-description-badge">{{ page.categories }}</span>
+                {% endif %}
+            </h1>
+    
+            {% if page.subtitle and page.subtitle.size > 0 %}
+                <h2>{{ page.subtitle }}</h2>
             {% endif %}
-        </h1>
+        </div>
+
+        <hr />
 
         <ul class="post-description-info">
             <li>

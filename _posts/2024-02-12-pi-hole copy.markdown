@@ -1,0 +1,111 @@
+---
+layout: post
+title: "ILOVEYOU"
+subtitle: You've got mail, and I love you! The cyber worm that loved everyone
+date: 2024-02-14 10:30:00 +0300
+categories: malware-analysis
+tags: [malware, cybersecurity, history]
+featured_image: /assets/images/iloveyou-outlook.png
+image-source: https://www.forbes.com/sites/daveywinder/2020/05/04/this-20-year-old-virus-infected-50-million-windows-computers-in-10-days-why-the-iloveyou-pandemic-matters-in-2020/
+tldr: During the internet boom of the 2000s, a simple email caused chaos across the interwebs when people began receiving out-of-the-blue love confessions from coworkers, and loved ones.
+---
+
+## History
+Staring on May 4th, 2000 a malicious program, or in this case a worm, began to spread globally over a large amount of networks and affected over tens of millions Windows PCs. The inboxes of Microsoft Windows users began to receive an interesting new email in their Outlook email clients with the subject line: ILOVEYOU, a text hinting towards a love confession: “kindly check the attached LOVELETTER coming from me”, and the worst part an email attachment: LOVE-LETTER-FOR-YOU.TXT.vbs.
+
+The emails didn’t come from some never-before-seen Arabian Prince’s email address wanting to give some heritage money, but the emails came from people in the infected users’s Windows Address Book (used by the Windows email client: Microsoft Outlook). So what the heck, let's see what Amy from accounting thinks about me. This is a type of social-engineering attack (exploiting human psychology).
+
+The worm is so effective, it spread to a wide range of business and governments, damaging their systems. The UK House Of Commons, The Pentagon, parts of the Danish parliament, AT-T and Ford Motors, and others were hit hard, and they all had to close some or most of their IT systems. It's estimated that around 10% of all internet connected computers worldwide were affected by the worm. The media caught on the spread of the worm, and the hunt for its creator.
+
+<hr />
+
+## Viruses & Worms
+Viruses and worms are subsets of malware or malicious software. Other types of malware include ransomware, trojans, adware, etc. Whilst all types of malware’s end-goals may vary - stealing data, damaging systems, ransoming files - each malware initially seeks to: infect systems, machines, or software to perform some sort of unauthorized and malicious actions.
+
+<b>Biology</b><br/>
+In general terms, software viruses and worms have the same type of functionality as their biological counterparts. They want to infect themselves with hosts (people/machines/software), replicate themselves further, and perform their activities.
+
+<b>Back to cyberspace</b><br/>
+As I stated earlier, viruses and worms are a subset of malware, we can also view worms as a subset of viruses. Let me explain how:
+
+Viruses and worms need to be initially activated, it can be by opening a file, or in the case of ILOVEYOU, by opening a lovely email attachment. Their end goal may vary but often they will try to: Corrupt, damage, and/or change the content of their infected files.
+
+Viruses: 
+* <b>Viruses</b>: When a virus gets activated it attaches itself to some sort of host file, like a document, and finds new files to infect. They will also try to find other machines and systems to spread to via common protocols like TCP/IP. They do however need user interaction to be able to be spread further. A simplified overview of virus infection:
+
+    1. A user downloads and opens a malicious email attachment, the malicious code gets executed
+    2. The virus looks for a host file on the infected system to attach itself to (.pdf, .exe, .txt, etc.)
+
+    3. It finds and attaches itself to a host file, and it may change or corrupt the file content
+    4. It now lays dormant until it gets executed by the system or by user interaction
+
+* <b>Worms</b>: Are similar to viruses, but they differ in the sense of propagation. Worms can self-replicate without user interaction and don’t require a host file to spread. They spread by self-replicating across a network. (A network is just two or more computers connected). Once initially activated, a worm will:
+
+    1. Look for files to infect in the same way as viruses
+    2. Scan for other machines on a network, and look for specific security vulnerabilities to self-replicate through
+    3. If it finds and can spread it will do so without user interaction
+
+<b>The danger of spreading</b><br/>
+If no kill-switch, geoblock, command and control server, or programming is in place to stop the spread of the worm, and it manages to stay hidden from systems and antivirus software, it can be devastating and spread not only in one network but throughout various networks and systems globally.
+
+<b>How they hide</b><br/>
+Viruses and worms try to stay hidden from systems, and antivirus software by:
+* Concealing their presence, and blending into systems
+* Using polymorphism (having multiple forms) and encryption
+* Having a small file size, and looking like any other ordinary file
+* Changing system settings, and even disabling the antivirus software
+
+<hr />
+
+## ILOVEYOU In Action
+When the ILOVEYOU file was opened it would:
+1. At random hide some files and corrupt/overwrite others
+    * The files that were corrupted couldn’t be restored on their own, just via a backup.
+    * Funnily enough audio files would only be hidden, not corrupted so DJs were luckier
+2. Change some registry keys to change the operating system functions
+3. It would copy and send itself to everyone in the infected user’s address book
+4. It would try to find machines and hosts on the network to spread to
+5. It would download a password stealer trojan called Barok, and name the file: WIN-BUGSFIX.EXE
+    * It would send the data the stealer had gathered to an email: mailme@super.net.ph
+
+The ILOVEYOUR worm was not the first internet worm, it did find a combination of software flaws to make it highly effective in spreading through, tricking users, and infecting systems. Melissa was another worm created before ILOVEYOU, it worked by spreading to the first 50 email contacts in the user's email client. It only spread to around 1 million computers and wasn't as successful at destroying files.
+
+The final amount of damages caused by the ILOVEYOU worm were estimated to be: 7.8 billion US dollars in damaged files and systems, and another 15 billions US dollars for the subsequent cleanup.
+
+{% include image-source.html image_path="/assets/images/iloveyou-destruction.png" alt_text="iloveyou-destruction" image_src="https://edition.cnn.com/2020/05/01/tech/iloveyou-virus-computer-security-intl-hnk/index.html" %}
+
+<hr />
+
+## Operating System Flaws
+One big flaw of the Windows OS in the late 90s, and early 2000s was that the developers had begun to implement a “feature” into the Windows operating system to remove file extensions by default, this was done to improve the ease of use and simplify the user interference of its system. So when users downloaded the email attachment: LOVE-LETTER-FOR-YOU.TXT.vbs, it looked like: LOVE-LETTER-FOR-YOU.TXT, on their Windows machines, deceiving most users into thinking it was an ordinary text file. This is a sort of “no-bug” software flaw that can be taken advantage of if one thinks outside the box.
+
+.vbs is a file extension for a scripting language called Visual Basic, and it was developed and used by Microsoft and their Windows operating system. So the content of the email attachments was malicious code that would execute upon the file being opened. The worm relied on another Windows flaw by having the scripting engine enabled by default, allowing .vbs scripts to run when their files were opened. The issue here was to trade security for ease of use.
+
+{% include image-source.html image_path="/assets/images/Windows2000_desktop.png" alt_text="windows2000" image_src="https://fi.wikipedia.org/wiki/Windows_2000" %}
+
+<hr />
+
+## Onel de Guzman
+The ILOVEYOUR worm’s creator Onel de Guzman, a poor and struggling 24-year-old Filipino developer, had combined several software vulnerabilities to create an almost unstoppable malware program, with the end goal of stealing users' passwords to get internet access for free. He stated that: “He believed that internet access is a human right and that he was not stealing.”. He also stated: "I wanted to create a gimmick".
+
+Guzman was investigated as the main suspect of the worm by the Philippines Bureau of Investigation (NBI), and he stated that he had tried to research and design a program to steal passwords for his college thesis, but that when it was rejected he had dropped out of the college. Investigators found that the ILOVEYOU worm was very similar to the work he had begun to do for his thesis, and he claimed that he might have released the worm accidentally. Guzman stated that it was easy to create the worm since it relied on several flaws and exploits in Windows 95 and 2000. .vbs scripts being able to execute in email clients, and on the OS by default, and also the flaw with hidden file extensions. Guzman had implemented a geographical block on the worm to only let it spread in his home city of Manila, but he removed the block after he became curious about how it would spread worldwide. 
+
+The Philippines had no laws against the development and spread of malicious programs and couldn’t indict Guzman, and he was released, and never prosecuted.
+
+<hr />
+
+## Conclusion
+The ILOVEYOU worm can be seen as open-source software as its code was completely visible upon infection, making it easy to read and modify. Several copycats of the original ILOVEYOU worm appeared and spread, they modified the VBS script to: changing the email subject, making the effects of afflicting additional damage to the infected machines, additional malware being sideloaded, etc. It estimated that up to 25 variations spread across the internet following the ILOVEYOU worm.
+
+I do believe that the era of this attack made it so effective and easy to spread. Everyone loved getting an email in those days, and getting one from someone you knew, first of all, made it look “safe”, and stating that they had feelings for you was the nail in the coffin for most people. The Windows “feature” of automatically hiding file extensions made it more believable when the attachment was downloaded. We also have to remember that personal computers and cybersecurity were new concepts and they had flaws, they just weren't as well known or common in those days. We didn’t know what to expect, businesses like Windows needed to create an easy-to-use system that sold well, not focusing a huge amount on security. Everything at that time was a big trial-and-error.
+
+The aftermath of all of this was that legislators, governments, and businesses began to implement laws, and protective measures to stop malicious software from being intentionally developed, and spread to cause harm. The Smithsonian Institute awarded the ILOVEYOU worm one of the top then most virulent computer viruses in history.
+
+Today we still receive spam and phishing emails, and I’d like to believe that we are more educated not to click on things we find “phishy” in junction with the fact that we have advanced spam filters, systems, best practices, and tools in place to stop those pesky spam emails from getting to our overfilling inboxes in the first place. The rise of AI, and finding new flaws in our beloved IT systems can of course be seen as a bad thing, but as we get AI-developed malware tools, we also develop AI countermeasures. It will be interesting to see how we develop new systems in the future, or maybe not in the far future, it might be already next year.
+
+We protect ourselves against worms and other malicious software by having updated systems, patching, penetration testing, bug bounties, antivirus software, IDS and IPS systems, firewalls, etc. We have become better at protecting ourselves, but the bad-actors are also upping their own game in similar speeds. 
+
+Watch the worm in <a href="https://www.youtube.com/watch?v=ZqkFfF5kAvw" target="_blank">action</a>
+
+Happy valentine's day ❤️<br/><i>If you get a personal email from me today, please do open it, treasure inside...</i>
+{% include image-source.html image_path="/assets/images/love.gif" alt_text="iloveyou" image_src="https://giphy.com/gifs/love-in-zrxazUScjhxo4" %}

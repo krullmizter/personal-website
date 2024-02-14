@@ -57,8 +57,8 @@ Viruses and worms try to stay hidden from systems, and antivirus software by:
 
 <hr />
 
-## ILOVEYOU In Action
-When the ILOVEYOU file was opened it would:
+## ILOVEYOU
+When the ILOVEYOU email attachment was opened it would:
 1. At random hide some files and corrupt/overwrite others
     * The files that were corrupted couldn’t be restored on their own, just via a backup.
     * Funnily enough audio files would only be hidden, not corrupted so DJs were luckier

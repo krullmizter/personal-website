@@ -11,16 +11,16 @@ tldr: During the internet boom of the 2000s, a simple email caused chaos across 
 ---
 
 ## History
-Staring on May 4th, 2000 a malicious program, or in this case a worm, began to spread globally over a large amount of networks and affected over tens of millions Windows PCs. The inboxes of Microsoft Windows users began to receive an interesting new email in their Outlook email clients with the subject line: ILOVEYOU, a text hinting towards a love confession: “kindly check the attached LOVELETTER coming from me”, and the worst part an email attachment: LOVE-LETTER-FOR-YOU.TXT.vbs.
+Staring on May 4th, 2000 a malicious program, or in this case a worm, began to spread globally over large amounts of networks, and affected over tens of millions of Windows PC users. The inboxes of Windows users began to receive an interesting email in their Outlook email clients with the subject line: <i>ILOVEYOU</i>, a text hinting towards a love confession: <i>kindly check the attached LOVELETTER coming from me</i>, and the worst part an email attachment: <i>LOVE-LETTER-FOR-YOU.TXT.vbs</i>.
 
 The emails didn’t come from some never-before-seen Arabian Prince’s email address wanting to give some heritage money, but the emails came from people in the infected users’s Windows Address Book (used by the Windows email client: Microsoft Outlook). So what the heck, let's see what Amy from accounting thinks about me. This is a type of social-engineering attack (exploiting human psychology).
 
-The worm is so effective, it spread to a wide range of business and governments, damaging their systems. The UK House Of Commons, The Pentagon, parts of the Danish parliament, AT-T and Ford Motors, and others were hit hard, and they all had to close some or most of their IT systems. It's estimated that around 10% of all internet connected computers worldwide were affected by the worm. The media caught on the spread of the worm, and the hunt for its creator.
+The worm is so effective, it spread to a wide range of individual, business, and governments, damaging their systems. The UK House of Commons, The Pentagon, parts of the Danish parliament, AT-T and Ford Motors, and others were hit hard, and they all had to close some or most of their IT systems. It's estimated that around 10% of all internet connected computers worldwide at the time of the attack were affected by the worm. The media caught on the spread of the worm, and the hunt for its creator.
 
 <hr />
 
 ## Viruses & Worms
-Viruses and worms are subsets of malware or malicious software. Other types of malware include ransomware, trojans, adware, etc. Whilst all types of malware’s end-goals may vary - stealing data, damaging systems, ransoming files - each malware initially seeks to: infect systems, machines, or software to perform some sort of unauthorized and malicious actions.
+Viruses and worms are subsets of malware or malicious software. Other types of malware include: ransomware, trojans, adware, etc. Whilst all types of malware’s end-goals may vary - stealing data, damaging systems, ransoming files - each malware initially seeks to: infect systems, machines, or software to perform some sort of unauthorized and malicious actions.
 
 <b>Biology</b><br/>
 In general terms, software viruses and worms have the same type of functionality as their biological counterparts. They want to infect themselves with hosts (people/machines/software), replicate themselves further, and perform their activities.
@@ -62,31 +62,33 @@ When the ILOVEYOU file was opened it would:
 1. At random hide some files and corrupt/overwrite others
     * The files that were corrupted couldn’t be restored on their own, just via a backup.
     * Funnily enough audio files would only be hidden, not corrupted so DJs were luckier
-2. Change some registry keys to change the operating system functions
+2. Change some registry keys to change functions in the OS
+    * This would allow the worm to be started at system boot
+    * This would also allow it to spread via Outlook, and perform other elevated actions
 3. It would copy and send itself to everyone in the infected user’s address book
 4. It would try to find machines and hosts on the network to spread to
-5. It would download a password stealer trojan called Barok, and name the file: WIN-BUGSFIX.EXE
-    * It would send the data the stealer had gathered to an email: mailme@super.net.ph
+5. It would install a password stealer trojan called Barok, and name the file: WIN-BUGSFIX.EXE
+    * It would send the stolen data to an email: mailme@super.net.ph
 
-The ILOVEYOUR worm was not the first internet worm, it did find a combination of software flaws to make it highly effective in spreading through, tricking users, and infecting systems. Melissa was another worm created before ILOVEYOU, it worked by spreading to the first 50 email contacts in the user's email client. It only spread to around 1 million computers and wasn't as successful at destroying files.
+The ILOVEYOUR worm was not the first internet worm, it did however find a combination of software flaws to make it highly effective in spreading, tricking users, and infecting systems. Melissa was another worm created in 1999, it worked by spreading to the first 50 email contacts in the user's email client. Due to its development it only spread to around 1 million computers and wasn't as successful at destroying files.
 
-The final amount of damages caused by the ILOVEYOU worm were estimated to be: 7.8 billion US dollars in damaged files and systems, and another 15 billions US dollars for the subsequent cleanup.
+The final amount of damages caused by the ILOVEYOU worm were estimated to be: $5.5–8.7 billion in damages, and another $10–15 billion for the subsequent cleanup.
 
 {% include image-source.html image_path="/assets/images/iloveyou-destruction.png" alt_text="iloveyou-destruction" image_src="https://edition.cnn.com/2020/05/01/tech/iloveyou-virus-computer-security-intl-hnk/index.html" %}
 
 <hr />
 
 ## Operating System Flaws
-One big flaw of the Windows OS in the late 90s, and early 2000s was that the developers had begun to implement a “feature” into the Windows operating system to remove file extensions by default, this was done to improve the ease of use and simplify the user interference of its system. So when users downloaded the email attachment: LOVE-LETTER-FOR-YOU.TXT.vbs, it looked like: LOVE-LETTER-FOR-YOU.TXT, on their Windows machines, deceiving most users into thinking it was an ordinary text file. This is a sort of “no-bug” software flaw that can be taken advantage of if one thinks outside the box.
+One big flaw of the Windows OS in the late 90s, and early 2000s was that the developers had begun to implement a “feature” into the Windows operating system to remove file extensions by default, this was done to improve the ease of use and simplify the user interference of its system. So when users downloaded the email attachment: <i>LOVE-LETTER-FOR-YOU.TXT.vbs</i>, it looked like: <i>LOVE-LETTER-FOR-YOU.TXT</i>, on their Windows machines, deceiving most users into thinking it was an ordinary text file. This is a sort of “no-bug” software flaw that can be taken advantage of if one thinks outside the box.
 
-.vbs is a file extension for a scripting language called Visual Basic, and it was developed and used by Microsoft and their Windows operating system. So the content of the email attachments was malicious code that would execute upon the file being opened. The worm relied on another Windows flaw by having the scripting engine enabled by default, allowing .vbs scripts to run when their files were opened. The issue here was to trade security for ease of use.
+<i>.vbs</i> is a file extension for a scripting language called Visual Basic, and it was developed and used by Microsoft and their Windows operating system. So the content of the email attachments was malicious code that would execute upon the file being opened. The worm relied on another Windows flaw by having the scripting engine enabled by default, allowing <i>.vbs</i> scripts to run when their files were opened. The issue here was to trade security for ease of use.
 
 {% include image-source.html image_path="/assets/images/Windows2000_desktop.png" alt_text="windows2000" image_src="https://fi.wikipedia.org/wiki/Windows_2000" %}
 
 <hr />
 
 ## Onel de Guzman
-The ILOVEYOUR worm’s creator Onel de Guzman, a poor and struggling 24-year-old Filipino developer, had combined several software vulnerabilities to create an almost unstoppable malware program, with the end goal of stealing users' passwords to get internet access for free. He stated that: “He believed that internet access is a human right and that he was not stealing.”. He also stated: "I wanted to create a gimmick".
+The ILOVEYOUR worm’s creator Onel de Guzman, was a poor and struggling 24-year-old Filipino student and developer. He combined several software vulnerabilities and found flaws to create an almost unstoppable malware program, with the end goal of stealing users' passwords for financial gains and to get internet access for free. He stated that: <i>“He believed that internet access is a human right and that he was not stealing.”</i>. He also stated: <i>"I wanted to create a gimmick"</i>.
 
 Guzman was investigated as the main suspect of the worm by the Philippines Bureau of Investigation (NBI), and he stated that he had tried to research and design a program to steal passwords for his college thesis, but that when it was rejected he had dropped out of the college. Investigators found that the ILOVEYOU worm was very similar to the work he had begun to do for his thesis, and he claimed that he might have released the worm accidentally. Guzman stated that it was easy to create the worm since it relied on several flaws and exploits in Windows 95 and 2000. .vbs scripts being able to execute in email clients, and on the OS by default, and also the flaw with hidden file extensions. Guzman had implemented a geographical block on the worm to only let it spread in his home city of Manila, but he removed the block after he became curious about how it would spread worldwide. 
 

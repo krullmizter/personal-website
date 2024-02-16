@@ -23,18 +23,3 @@ icon: fa-solid fa-newspaper
     {% include post-description.html design=design %}
   {% endfor %}
 </div>
-
-<script>
-  document.querySelectorAll('.tag').forEach(tagButton => {
-  tagButton.addEventListener('click', function() {
-    const tag = this.getAttribute('data-tag');
-    document.querySelectorAll('.blog-posts-post').forEach(post => {
-      if (post.getAttribute('data-tags').includes(tag)) {
-        post.style.display = 'block';
-      } else {
-        post.style.display = 'none';
-      }
-    });
-  });
-});
-</script>

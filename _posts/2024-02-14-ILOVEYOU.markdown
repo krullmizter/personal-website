@@ -15,12 +15,12 @@ Staring on May 4th, 2000 a malicious program, or in this case a worm, began to s
 
 The emails didn’t come from some never-before-seen Arabian Prince’s email address wanting to give some heritage money, but the emails came from people in the infected users’s Windows Address Book (used by the Windows email client: Microsoft Outlook). So what the heck, let's see what Amy from accounting thinks about me. This is a type of social-engineering attack (exploiting human psychology).
 
-The worm is so effective, it spread to a wide range of individual, business, and governments, damaging their systems. The UK House of Commons, The Pentagon, parts of the Danish parliament, AT-T and Ford Motors, and others were hit hard, and they all had to close some or most of their IT systems. It's estimated that around 10% of all internet connected computers worldwide at the time of the attack were affected by the worm. The media caught on the spread of the worm, and the hunt for its creator.
+The worm was so effective, it spread to a wide range of individuals, businesses, and governments around the world, damaging their systems. The UK House of Commons, The Pentagon, parts of the Danish parliament, AT-T and Ford Motors, and others were hit hard, and they all had to close some or most of their IT systems. It's estimated that around 10% of all internet connected computers worldwide at the time of the attack were affected by the worm. The media caught on the spread of the worm, and the hunt for its creator.
 
 <hr />
 
 ## Viruses & Worms
-Viruses and worms are subsets of malware or malicious software. Other types of malware include: ransomware, trojans, adware, etc. Whilst all types of malware’s end-goals may vary - stealing data, damaging systems, ransoming files - each malware initially seeks to: infect systems, machines, or software to perform some sort of unauthorized and malicious actions.
+Viruses and worms are subsets of malware, or in other terms: malicious software. Other types of malware include: ransomware, trojans, adware, among others. Whilst all types of malware’s end-goals may vary - stealing data, damaging systems, ransoming files - each malware initially seeks to: infect systems, machines, or software to perform some sort of unauthorized and malicious actions.
 
 <b>Biology</b><br/>
 In general terms, software viruses and worms have the same type of functionality as their biological counterparts. They want to infect themselves with hosts (people/machines/software), replicate themselves further, and perform their activities.
@@ -28,9 +28,9 @@ In general terms, software viruses and worms have the same type of functionality
 <b>Back to cyberspace</b><br/>
 As I stated earlier, viruses and worms are a subset of malware, we can also view worms as a subset of viruses. Let me explain how:
 
+<b>The basics of viruses and worms</b><br/>
 Viruses and worms need to be initially activated, it can be by opening a file, or in the case of ILOVEYOU, by opening a lovely email attachment. Their end goal may vary but often they will try to: Corrupt, damage, and/or change the content of their infected files.
 
-Viruses: 
 * <b>Viruses</b>: When a virus gets activated it attaches itself to some sort of host file, like a document, and finds new files to infect. They will also try to find other machines and systems to spread to via common protocols like TCP/IP. They do however need user interaction to be able to be spread further. A simplified overview of virus infection:
 
     1. A user downloads and opens a malicious email attachment, the malicious code gets executed
@@ -70,6 +70,7 @@ When the ILOVEYOU email attachment was opened it would:
 5. It would install a password stealer trojan called Barok, and name the file: WIN-BUGSFIX.EXE
     * It would send the stolen data to an email: mailme@super.net.ph
 
+<b>Not first, nor last</b><br/>
 The ILOVEYOUR worm was not the first internet worm, it did however find a combination of software flaws to make it highly effective in spreading, tricking users, and infecting systems. Melissa was another worm created in 1999, it worked by spreading to the first 50 email contacts in the user's email client. Due to its development it only spread to around 1 million computers and wasn't as successful at destroying files.
 
 The final amount of damages caused by the ILOVEYOU worm were estimated to be: $5.5–8.7 billion in damages, and another $10–15 billion for the subsequent cleanup.
@@ -81,6 +82,7 @@ The final amount of damages caused by the ILOVEYOU worm were estimated to be: $5
 ## Operating System Flaws
 One big flaw of the Windows OS in the late 90s, and early 2000s was that the developers had begun to implement a “feature” into the Windows operating system to remove file extensions by default, this was done to improve the ease of use and simplify the user interference of its system. So when users downloaded the email attachment: <i>LOVE-LETTER-FOR-YOU.TXT.vbs</i>, it looked like: <i>LOVE-LETTER-FOR-YOU.TXT</i>, on their Windows machines, deceiving most users into thinking it was an ordinary text file. This is a sort of “no-bug” software flaw that can be taken advantage of if one thinks outside the box.
 
+<b>Visual Basic</b><br/>
 <i>.vbs</i> is a file extension for a scripting language called Visual Basic, and it was developed and used by Microsoft and their Windows operating system. So the content of the email attachments was malicious code that would execute upon the file being opened. The worm relied on another Windows flaw by having the scripting engine enabled by default, allowing <i>.vbs</i> scripts to run when their files were opened. The issue here was to trade security for ease of use.
 
 {% include image-source.html image_path="/assets/images/Windows2000_desktop.png" alt_text="windows2000" image_src="https://fi.wikipedia.org/wiki/Windows_2000" %}
@@ -99,12 +101,15 @@ The Philippines had no laws against the development and spread of malicious prog
 ## Conclusion
 The ILOVEYOU worm can be seen as open-source software as its code was completely visible upon infection, making it easy to read and modify. Several copycats of the original ILOVEYOU worm appeared and spread, they modified the VBS script to: changing the email subject, making the effects of afflicting additional damage to the infected machines, additional malware being sideloaded, etc. It estimated that up to 25 variations spread across the internet following the ILOVEYOU worm.
 
+<b>Own thoughts</b><br/>
 I do believe that the era of this attack made it so effective and easy to spread. Everyone loved getting an email in those days, and getting one from someone you knew, first of all, made it look “safe”, and stating that they had feelings for you was the nail in the coffin for most people. The Windows “feature” of automatically hiding file extensions made it more believable when the attachment was downloaded. We also have to remember that personal computers and cybersecurity were new concepts and they had flaws, they just weren't as well known or common in those days. We didn’t know what to expect, businesses like Windows needed to create an easy-to-use system that sold well, not focusing a huge amount on security. Everything at that time was a big trial-and-error.
 
+<b>Aftermath</b><br/>
 The aftermath of all of this was that legislators, governments, and businesses began to implement laws, and protective measures to stop malicious software from being intentionally developed, and spread to cause harm. The Smithsonian Institute awarded the ILOVEYOU worm one of the top then most virulent computer viruses in history.
 
 Today we still receive spam and phishing emails, and I’d like to believe that we are more educated not to click on things we find “phishy” in junction with the fact that we have advanced spam filters, systems, best practices, and tools in place to stop those pesky spam emails from getting to our overfilling inboxes in the first place. The rise of AI, and finding new flaws in our beloved IT systems can of course be seen as a bad thing, but as we get AI-developed malware tools, we also develop AI countermeasures. It will be interesting to see how we develop new systems in the future, or maybe not in the far future, it might be already next year.
 
+<b>Today</b><br/>
 We protect ourselves against worms and other malicious software by having updated systems, patching, penetration testing, bug bounties, antivirus software, IDS and IPS systems, firewalls, etc. We have become better at protecting ourselves, but the bad-actors are also upping their own game in similar speeds. 
 
 Watch the worm in <a href="https://www.youtube.com/watch?v=ZqkFfF5kAvw" target="_blank">action</a>

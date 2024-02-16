@@ -8,7 +8,7 @@
             {% endif %}
 
             <div class="blog-posts-post-description">
-                <h3>{{ post.title }}</h3>
+                <h4>{{ post.title }}</h4>
 
                 <p>{{ post.date | date: "%B %d, %Y" }} &#183;
                     <span>
@@ -42,7 +42,7 @@
             </h1>
     
             {% if page.subtitle and page.subtitle.size > 0 %}
-                <h2>{{ page.subtitle }}</h2>
+                <h3>{{ page.subtitle }}</h3>
             {% endif %}
         </div>
 

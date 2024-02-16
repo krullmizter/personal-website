@@ -2,16 +2,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
- 
-  {%- include custom-head.html -%}
+  {%- seo -%}
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   
+  <script src="{{ "/assets/scripts/main.js" | relative_url }}"></script>
   <script src="https://kit.fontawesome.com/e17aad6c5d.js" crossorigin="anonymous"></script>
   <script src="https://cdn.counter.dev/script.js" data-id="24801231-a454-4e64-a07d-45aa0d3853e0" data-utcoffset="2"></script>
 </head>

@@ -5,15 +5,12 @@ image-source:
 ---
 
 <div class="post-meta">
-    {% assign tldr = post.tldr %}
-
-    {% assign word_count = content | number_of_words %}
-
-    {% include post-description.html %}
-
-    <h3>{{ page.tldr }}</h3>
-
-    <hr />
+  {% assign tldr = post.tldr %} {% assign word_count = content | number_of_words
+  %} {% include post-description.html %} {% if tldr %}
+  <h3 class="tldr">Summary</h3>
+  <p>{{ tldr }}</p>
+  <hr />
+  {% endif %}
 </div>
 
 <div class="post-content">{{ content }}</div>

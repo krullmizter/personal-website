@@ -1,13 +1,26 @@
-<div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">
-        Previous
-      </a>
-    {% endif %}
-    <span class="page_number ">
-      {{ paginator.page }} of {{ paginator.total_pages }}
-    </span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% endif %}
+<div class="pagination" role="navigation" aria-label="Pagination">
+  {% if paginator.previous_page %}
+  <a
+    href="{{ paginator.previous_page_path }}"
+    class="previous"
+    aria-label="Previous page"
+  >
+    Previous
+  </a>
+  {% endif %}
+
+  <span class="word-count">
+    📖 {% assign words = content | number_of_words %} {% if words < 360 %} 1 min
+    {% else %} {{ words | divided_by: 180 }} mins {% endif %}
+  </span>
+
+  <span class="page-number">
+    Page {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next" aria-label="Next page"
+    >Next</a
+  >
+  {% endif %}
 </div>

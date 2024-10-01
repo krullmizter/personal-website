@@ -1,6 +1,9 @@
 <footer class="site-footer h-card">
   
-  <button onclick="topTheTop()" id="topBtn" title="Scroll to the top"><i class="fa-solid fa-arrow-up"></i></button>
+  <!-- Scroll to Top Button -->
+  <button onclick="topTheTop()" id="topBtn" title="Scroll to the top" aria-label="Scroll to the top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
@@ -9,28 +12,28 @@
       <div>
         <ul class="contact-list">
           <li>
-              <a href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope"></i> {{ site.email }}</a>
+            <a href="https://github.com/krullmizter" target="_blank" rel="noopener noreferrer" aria-label="GitHub: krullmizter">
+              <i class="fa-brands fa-github"></i> krullmizter
+            </a>
           </li>
           <li>
-            <a href="https://github.com/krullmizter" target="_blank"><i class="fa-brands fa-github"></i> krullmizter</a>
+            <a href="https://www.linkedin.com/in/samuel-granvik-93977013a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: Samuel Granvik">
+              <i class="fa-brands fa-linkedin-in"></i> Samuel Granvik
+            </a>
           </li>
-          <li>
-            <a href="https://www.linkedin.com/in/samuel-granvik-93977013a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> Samuel Granvik</a>
-          </li>
-          <li style="margin-top: 25px">
-            <a href="https://www.buymeacoffee.com/samuelgranvik" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" ></a>            
+          <li style="margin-top: 25px;">
+            <a href="https://www.buymeacoffee.com/samuelgranvik" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px; width: 145px;">
+            </a>
           </li>
         </ul>
       </div>
-    <div>
-      <p>{{ site.description | escape }}</p>
-      <p>Built using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & Hosted on<a href="https://pages.github.com/" target="_blank"> GitHub Pages</a>.</p>
-      <p>This page uses a privacy-friendly analytics tool <a href="https://counter.dev/" target="_blank">counter.dev</a></p>
-      <p>{{ site.title | escape }} © {{ 'now' | date: "%Y" }}</p>
+      <div>
+        <p>{{ site.description | escape }}</p>
+        <p>Built using <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> & Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
+        <p>This page uses a privacy-friendly analytics tool <a href="https://counter.dev/" target="_blank" rel="noopener noreferrer">counter.dev</a><br /> By using this page you are only tracked as a visitor, and which platform, and country you visited my site from</p>
+        <p>{{ site.title | escape }} © {{ 'now' | date: "%Y" }}</p>
+      </div>
+    </div>
   </div>
 </footer>
-
-<script>
-
-</script>
-    

@@ -1,14 +1,37 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- feed_meta -%}
-  {%- seo -%}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-  
-  <script src="{{ "/assets/scripts/main.js" | relative_url }}"></script>
-  <script src="https://kit.fontawesome.com/e17aad6c5d.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.counter.dev/script.js" data-id="24801231-a454-4e64-a07d-45aa0d3853e0" data-utcoffset="2"></script>
+  <!-- SEO and feed metadata -->
+  {%- feed_meta -%} {%- seo -%}
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>"
+  />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <link
+    rel="stylesheet"
+    href="{{ 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' | relative_url }}"
+    integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM2Wyy2C8hZq2v5z8eJx8Oltp9D4hk9yE8LCE5"
+    crossorigin="anonymous"
+  />
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/scripts/main.js' | relative_url }}" defer></script>
+  <script
+    src="https://kit.fontawesome.com/e17aad6c5d.js"
+    crossorigin="anonymous"
+    async
+  ></script>
+  <script
+    src="https://cdn.counter.dev/script.js"
+    data-id="24801231-a454-4e64-a07d-45aa0d3853e0"
+    data-utcoffset="2"
+    async
+  ></script>
 </head>

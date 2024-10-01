@@ -1,17 +1,43 @@
-# Personal website, portfolio & blog
-### Built using Jekyll as a static website, hosted & deployed on GitHub pages using GitHub actions.
+# Personal Website, Portfolio & Blog
 
-https://www.samuelgranvik.tech/
+Welcome to my personal website, portfolio, and blog! This site is built using Jekyll as a static website and is hosted & deployed on GitHub Pages using GitHub Actions.
+
+🔗 **Website link**: [samuelgranvik.tech](https://www.samuelgranvik.tech/)
 
 ---
 
-Want to copy my work? No problem just:
+## Want to Copy My Work? No Problem!
 
-1. Download [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
-2. Clone this repo, and `cd` into it
-3. Install jekyll and bundler: `gem install bundler jekyll`
-4. Install dependencies within cloned repo: `bundle install`
-5. Serve a local version of the website: `bundle exec jekyll serve`
-6. If you want to build the project to its production state: `bundle exec jekyll build`
+Follow these steps to set up your own copy of this project:
 
-For more details check out Jekyll's official documentation: [Docs](https://jekyllrb.com/docs/installation/)
+1. **Install Ruby**: Download [Ruby](https://www.ruby-lang.org/en/documentation/installation/) (version 2.5.0 or higher).
+2. **Install RubyGems**: Ensure you have RubyGems installed (it comes with Ruby).
+3. **Install GCC and Make**: These tools are necessary for building native extensions.
+4. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+   ```
+
+````
+
+5. **Install Jekyll and Bundler**:
+   ```bash
+   gem install bundler jekyll
+   ```
+6. **Install Dependencies**:
+   ```bash
+   bundle install
+   ```
+7. **Serve the Local Version**:
+   ```bash
+   bundle exec jekyll serve
+   ```
+   This will start a local server and you can view your site at `http://localhost:4000`.
+8. **Build for Production**: If you want to create a production build of the site, run:
+   ```bash
+   bundle exec jekyll build
+   ```
+
+For detailed installation instructions, check out Jekyll's official documentation: [Jekyll Documentation](https://jekyllrb.com/docs/installation/).
+````

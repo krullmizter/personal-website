@@ -1,35 +1,38 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Samuel Granvik
-email: samgran@outlook.com
-description: >-
-  This websites serves as: a portfolio and digital CV, a window into my personal interests, and well-crafted blog posts.
+title: Samuel Granvik | A Personal Portfolio
+description: "This website serves as: a portfolio and digital CV, a window into my personal interests, and well-crafted blog posts."
+keywords: "portfolio, digital CV, blog, Samuel Granvik"
+author: "Samuel Granvik"
 url: "https://www.samuelgranvik.tech"
 github_username: krullmizter
+lang: en
 
+# Theme settings
 remote_theme: jekyll/minima
 minima:
   skin: dark
-  
-permalink: /:title
+
+# Permalink settings
+permalink: /:categories/:title/
+
+# Custom assets
+css:
+  - assets/css/style.css
+js:
+  - assets/js/script.js
+
+# Blog posts pagination settings
+pagination:
+  enabled: true
+  items: 5
+  per_page: 5
+  paginate_path: "/blog/page:num"
+
+# Navigation settings
+header_pages:
+  - index.html
+  - blog/index.html
+  - pages/bachelor-thesis.md
 
 # Build settings
 plugins:
@@ -37,11 +40,10 @@ plugins:
   - jekyll-paginate
   - jekyll-remote-theme
 
-# Change the order of the items/pages in the navbar
-header_pages:
-  - pages/index.html
-  - blog/index.html
-  - pages/bachelor-thesis.md
-
+# Exclude unnecessary files from the build
 exclude:
   - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - LICENSE

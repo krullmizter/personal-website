@@ -7,46 +7,101 @@ icon: fa-solid fa-house
 
 <div class="intro">
   <div class="intro-wrapper">
-    <div class="intro-image" style="background-image: url('/assets/images/profile-2.jpg');"></div>
-  
-    <div class="intro-text">    
-      <h1>👋I'm Samuel!</h1>
-      <h3>Engineer, Developer, M.Sc. Student, LOTR Nerd, Cybersecurity Enthusiast & Dog Lover from 🇫🇮</h3>
+    <div
+      class="intro-image"
+      style="background-image: url('/assets/images/profile-2.jpg')"
+    ></div>
+
+    <div class="intro-text">
+      <h1>👋 I'm Samuel!</h1>
+      <h3>
+        Engineer, Developer, M.Sc. Student, LOTR Nerd, Cybersecurity Enthusiast
+        & Dog Lover from 🇫🇮
+      </h3>
 
       <hr />
-      
+
       <h4>{{ site.description }}</h4>
-      <p style="font-size: 14px; font-weight: 100"><i>I do suffer from reading & writing difficulties, so if anything looks, or is wrong tht's why...</i></p>
+      <p style="font-size: 14px; font-weight: 100">
+        <i
+          >I experience reading and writing challenges, so if anything looks or
+          is wrong, that's why...</i
+        >
+      </p>
     </div>
   </div>
 
-  <code>
-    Favorite:<br/><br/>
-    <b>Languages:</b> Ruby, PHP, Python, JS, C#, C <br />
-    <b>WebDev:</b> Laravel, WordPress, SCSS, Node.js, TS, React<br />
-    <b>Databases:</b> Redis, MySQL, GraphQL, MongoDB<br />
-    <b>Topics:</b> Cybersecurity, Digital Privacy, Reverse-engineering, Deep-learning<br /><br />
-    I do know other stuff as well: <a href="https://github.com/krullmizter/" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/samuel-granvik-93977013a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-  </code>
+  <div class="about-section">
+    <h2>About Me</h2>
+    <p>
+      I'm currently working with <strong>React Native</strong>,
+      <strong>TypeScript</strong>, and <strong>C#</strong> at
+      <strong>
+        <a
+          link
+          href="https://www.linkedin.com/in/samuel-granvik/"
+          target="_blank"
+          >Beamex</a
+        ></strong
+      >, all while pursuing my computer engineering Master’s degree at
+      <strong>
+        <a
+          href="https://www.abo.fi/en/study-subject/computer-engineering/"
+          target="_blank"
+          >Åbo Akademi</a
+        ></strong
+      >
+    </p>
+  </div>
 
+  <div class="skills-section">
+    <h2>Skills</h2>
+    <ul>
+      <li><b>Languages:</b> Ruby, PHP, Python, JavaScript, C#, C</li>
+      <li>
+        <b>Web Development:</b> Laravel, WordPress, SCSS, Node.js, TypeScript,
+        React
+      </li>
+      <li><b>Databases:</b> Redis, MySQL, GraphQL, MongoDB</li>
+      <li>
+        <b>Topics of Interest:</b> Cybersecurity, Digital Privacy, Reverse
+        Engineering, Deep Learning
+      </li>
+    </ul>
+  </div>
+
+  <p>
+    Connect with me on:
+    <a href="https://github.com/krullmizter/" target="_blank"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a
+      href="https://www.linkedin.com/in/samuel-granvik-93977013a/"
+      target="_blank"
+      ><i class="fa-brands fa-linkedin-in"></i
+    ></a>
+  </p>
 </div>
 
 <hr />
 
 <h2>Bachelor's Thesis</h2>
-<h4>Open-source dog breed identification built with Fast.ai’s CNN using transfer learning 🐕</h4>
-<p>Feel free to read about my bachelor thesis regarding: Deep-learning, dog breed identification, Fast.ai, Python and much more.</p>
+<h4>
+  Open-source dog breed identification built with Fast.ai’s CNN using transfer
+  learning 🐕
+</h4>
+<p>
+  Feel free to read about my bachelor's thesis regarding deep learning, dog
+  breed identification, Fast.ai, Python, and much more.
+</p>
 <a href="{% link pages/bachelor-thesis.md %}" class="btn">Read More</a>
 <hr />
 
 <h2>Latest Posts</h2>
 
 <div class="blog-posts">
-  {% assign design = 'posts' %}
-  
-  {% for post in site.posts limit: 6 %}
-    {% include post-description.html design=design %}
-  {% endfor %}
+  {% assign design = 'posts' %} {% for post in site.posts limit: 6 %} {% include
+  post-description.html design=design %} {% endfor %}
 </div>
 
 <a href="{% link blog/index.html %}" class="btn">More Posts</a>

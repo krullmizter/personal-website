@@ -2,6 +2,8 @@
 layout: base
 title: Blog
 icon: fa-solid fa-newspaper
+paginate: 5
+paginate_path: "/blog/page:num"
 ---
 
 <div class="tags-wrapper">
@@ -11,15 +13,26 @@ icon: fa-solid fa-newspaper
   <select class="tags">
     <option class="tag" data-tag="">All</option>
     {% for tag in all_tags %}
-      <option class="tag" data-tag="{{ tag }}">{{ tag }}</option>
+    <option class="tag" data-tag="{{ tag }}">{{ tag }}</option>
     {% endfor %}
   </select>
 </div>
 
 <div class="blog-posts">
-  {% assign design = 'posts' %}
-  
-  {% for post in site.posts %}
-    {% include post-description.html design=design %}
-  {% endfor %}
+  {% assign design = 'posts' %} {% for post in paginator.posts %} {% include
+  post-description.html design=design %} {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
+  {% endif %}
+
+  <span class="page-number"
+    >Page {{ paginator.page }} of {{ paginator.total_pages }}</span
+  >
+
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% endif %}
 </div>

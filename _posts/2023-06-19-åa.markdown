@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "Master's program"
-date:   2023-10-11 18:30:02 +0300
+title: "Master's program"
+date: 2023-10-11 18:30:02 +0300
 categories: education
 featured_image: /assets/images/akademi.jpg
-image-source: https://www.studyopportunities.online/
+content-source: https://www.studyopportunities.online/
 tldr: This fall, I started my master's program in computer engineering at Åbo Akademi University, with an expected graduation date in 2025.
-
 ---
 
 I've really enjoyed this new academic journey. Continuing my studies in a field that is relevant to my interests has worked well for me.
@@ -19,4 +18,4 @@ I find the coursework manageable, as it aligns closely with my previous work exp
 
 I am particularly looking forward to my master's thesis, and I hope to align it with my current employer.
 
-[Read more](https://www.abo.fi/en/study-subject/computer-engineering/){:target="_blank"} about the computer engineering major subject
+[Read more](https://www.abo.fi/en/study-subject/computer-engineering/){:target="\_blank"} about the computer engineering major subject

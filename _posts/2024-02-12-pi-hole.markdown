@@ -6,20 +6,22 @@ date: 2024-02-12 17:30:00 +0300
 categories: privacy
 tags: [hardware, privacy, tips]
 featured_image: /assets/images/pihole.png
-image-source: https://cdcloudlogix.com/simple-guide-pi-hole-on-raspberry-pi-with-ipv6/
+content-source: https://cdcloudlogix.com/simple-guide-pi-hole-on-raspberry-pi-with-ipv6/
 tldr: A pi-hole is an open-source DNS sinkhole, able to block ads, trackers and other content on a network wide scale. This is a quick overview of what it is, how its used and what it can do.
 ---
 
 ## Introduction
+
 So it's a 🥧 that blocks ads, how is that different from an add-on like uBlock Origin? An ad-blocker like uBlock only works on the device's browser where it's installed, like when you browse the web, not on your actual OS. Well when we set-up a pi-hole we can force all the devices on a network to block content independent of what type of hardware or software it is. This means that ads can be blocked on your fancy smart TV, gaming console and smartphone, cool right?!
 
-* pi-hole [website](https://pi-hole.net/){:target="_blank"}
-* pi-hole [GitHub](https://github.com/pi-hole/web){:target="_blank"}
-* Follow [this](https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/){:target="_blank"} tutorial if you want a more in-depth pi-hole setup on a raspberry pi
+- pi-hole [website](https://pi-hole.net/){:target="\_blank"}
+- pi-hole [GitHub](https://github.com/pi-hole/web){:target="\_blank"}
+- Follow [this](https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/){:target="\_blank"} tutorial if you want a more in-depth pi-hole setup on a raspberry pi
 
 <hr />
 
 ## DNS Sinkholes
+
 What's a DNS you might ask? Well I've covered it a bit more [here](https://www.samuelgranvik.tech/encrypted-dns) but what a DNS does is it converts the domain-names to ip-addresses and back. So instead of having to remember: 151.101.1.140, we can type in reddit.com and get the website served.
 
 The pi-hole is a type of DNS sinkhole. Sinkholes work by filtering out the type of DNS traffic based on a blocklist file containing URLs that we want to block or redirect the user from visiting.
@@ -27,29 +29,33 @@ The pi-hole is a type of DNS sinkhole. Sinkholes work by filtering out the type 
 <hr />
 
 ## Raspberry Pi
+
 A pi-hole is usually (as the name suggests) set up on a Raspberry Pi. It's a very small computer. One can also setup a pi-hole on any type of computer, virtual machine, or even on a container service, like a [docker container](https://www.docker.com/).
 
-{% include image-source.html image_path="/assets/images/pi.png" alt_text="Raspberry Pi" image_src="https://www.pcworld.com/article/2168199/raspberry-pi-the-best-beginner-projects-with-the-popular-single-board-computer.html" %}
+{% include content-source.html image_path="/assets/images/pi.png" alt_text="Raspberry Pi" image_src="https://www.pcworld.com/article/2168199/raspberry-pi-the-best-beginner-projects-with-the-popular-single-board-computer.html" %}
 
 <hr />
 
 ## General Pi-hole Setup
+
 This following setup is very general and it doesn't go into detail what to do, follow the link in the intro for more in-depth setup steps.
 
 However, Let's say we have a raspberry pi laying around, we can use it to create a local pi-hole:
+
 1. Install a compatible raspberry pi OS like: Raspbian.
-2. Install the pi-hole [software](https://github.com/pi-hole/pi-hole/#one-step-automated-install){:target="_blank"} either manually or via their automatic installer.
+2. Install the pi-hole [software](https://github.com/pi-hole/pi-hole/#one-step-automated-install){:target="\_blank"} either manually or via their automatic installer.
 3. Set your router or local DHCP to force each device and client on the network to use the pi-hole as their primary DNS server.
-    * One can also add manually add the pi-hole as the DNS server of choice for each device.
+   - One can also add manually add the pi-hole as the DNS server of choice for each device.
 4. Navigate to your raspberry pi's IP address, followed by /admin to get to the web-interface. It can be used to view statistics, change settings, and everything you can imagine.
 
 Yey you now have a freshly installed pi-hole! 🥧
 
-{% include image-source.html image_path="/assets/images/pi-dashboard.png" alt_text="pi-dashboard" image_src="https://github.com/pi-hole/web" %}
+{% include content-source.html image_path="/assets/images/pi-dashboard.png" alt_text="pi-dashboard" image_src="https://github.com/pi-hole/web" %}
 
 <hr />
 
 ## Pros
+
 Well its always nice to block ads, and trackers. With those blocked you're less likely to click on those pesky pop-up ads filled with malware on your third-party Robolox clone app. It can also reduce your bills if you are paying by the amount of data you are using. Blocking trackers and ads on smart TVs, and other more "closed-circuit" systems, that are still connected to the internet, is also a nice thing to have. Having all the customizability in the world is also nice, and the maintenance is zero to none if you want it to be so, but who want that!?
 
 The availability of network wide blocking and filtering can aid in blocking certain websites and content if you want to play Chinese firewall, or use some sort of parental control.
@@ -57,24 +63,28 @@ The availability of network wide blocking and filtering can aid in blocking cert
 <hr />
 
 ## Cons
+
 As stated above there is a small amount of configuration and management that needs to be done to keep both the pi-hole, its block-, and allowlists, and its underlying OS up-to-date, but nothing that will make you go crazy and not even a network engineer. Yes parental control and content blocking can also be seen as a bad thing, and that why I have it here as well.
 
 <hr />
 
 ## Tips
+
 You can install and configure a VPN like [Tailscale](https://tailscale.com/), [WireGuard](https://www.wireguard.com/) or [OpenVPN](https://openvpn.net/) to make your pi-hole sinkhole DNS accessible outside your home network.
 
-There are other services like: [NextDNS](https://nextdns.io/){:target="_blank"} that also handles DNS filtering, as well as working as a encrypted DNS provider (which a default pi-hole setup does not do). <i>I might do a post about it in the future.</i>
+There are other services like: [NextDNS](https://nextdns.io/){:target="\_blank"} that also handles DNS filtering, as well as working as a encrypted DNS provider (which a default pi-hole setup does not do). <i>I might do a post about it in the future.</i>
 
-Here is my own (outdated as of 12.02.2024, might update soon...) pi-hole [blocklist](https://github.com/krullmizter/pihole-blocklist){:target="_blank"} where you can see what pi-hole blocklists look like.
+Here is my own (outdated as of 12.02.2024, might update soon...) pi-hole [blocklist](https://github.com/krullmizter/pihole-blocklist){:target="\_blank"} where you can see what pi-hole blocklists look like.
+
 <hr />
 
 ## Conclusion
+
 There is a grey area when it comes to not loading ads, indiscriminate ad-blocking can inadvertently harm content creators and media outlets dependent on ad revenue. This ethical conundrum underscores the importance of mindful filtering choices. On the other hand, Pi-hole offers a balanced solution: while it empowers users to extensively block unwanted ads, it equally enables them to consciously whitelist URLs and filters. This allows the user to both block ads and trackers, whilst supporting their favorite content creators.
 
 The communities of both the pi-hole, and raspberry pi projects are both friendly, helpful, and nice to chat with. They will help with any questions, so don't hesitate to open a discursion with them:
 
-* Pi-hole [forum](https://discourse.pi-hole.net/){:target="_blank"}
-* Raspberry Pi [forum](https://forums.raspberrypi.com/){:target="_blank"}
+- Pi-hole [forum](https://discourse.pi-hole.net/){:target="\_blank"}
+- Raspberry Pi [forum](https://forums.raspberrypi.com/){:target="\_blank"}
 
-{% include image-source.html image_path="/assets/images/raspberry.gif" alt_text="raspberry" image_src="https://giphy.com/gifs/berry-raspberry-berries-2CtZ68q8ocrwQ" %}
+{% include content-source.html image_path="/assets/images/raspberry.gif" alt_text="raspberry" image_src="https://giphy.com/gifs/berry-raspberry-berries-2CtZ68q8ocrwQ" %}

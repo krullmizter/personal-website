@@ -1,43 +1,62 @@
 # Personal Website, Portfolio & Blog
 
-Welcome to my personal website, portfolio, and blog! This site is built using Jekyll as a static website and is hosted & deployed on GitHub Pages using GitHub Actions.
+### This repository hosts my portfolio and blog website.
 
-🔗 **Website link**: [samuelgranvik.tech](https://www.samuelgranvik.tech/)
+#### Project Overview:
 
----
+This personal website serves as a portfolio to showcase my projects, skills, and experiences. Additionally, it features a blog where I share insights, tutorials, and updates on my work. The site is designed to be clean, responsive, and user-friendly.
+
+#### Links:
+
+- 🔗 **Website URL**: [samuelgranvik.tech](https://www.samuelgranvik.tech/)
+- 📖 **Jekyll's official documentation**: [https://jekyllrb.com/docs/installation/](https://jekyllrb.com/docs/installation/)
 
 ## Want to Copy My Work? No Problem!
 
 Follow these steps to set up your own copy of this project:
 
+### Prerequisites
+
+Before you begin, ensure you have the following:
+
+- A GitHub account to host your site.
+- Basic knowledge of Git, Ruby, HTML, CSS, JS and the command line.
+
+### Installation Steps:
+
 1. **Install Ruby**: Download [Ruby](https://www.ruby-lang.org/en/documentation/installation/) (version 2.5.0 or higher).
 2. **Install RubyGems**: Ensure you have RubyGems installed (it comes with Ruby).
 3. **Install GCC and Make**: These tools are necessary for building native extensions.
 4. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+
+   ```sh
+   git clone https://github.com/krullmizter/personal-website.git
+   cd personal-website
    ```
 
-````
-
 5. **Install Jekyll and Bundler**:
-   ```bash
+   ```sh
    gem install bundler jekyll
    ```
 6. **Install Dependencies**:
-   ```bash
+   ```sh
    bundle install
    ```
-7. **Serve the Local Version**:
-   ```bash
+7. **Initialize a Local Jekyll Version**:
+
+   The command below will start a local Jekyll server at: http://localhost:4000
+
+   ```sh
    bundle exec jekyll serve
    ```
-   This will start a local server and you can view your site at `http://localhost:4000`.
-8. **Build for Production**: If you want to create a production build of the site, run:
-   ```bash
-   bundle exec jekyll build
+
+   To initialize the local server with hot reloading add the `--livereload` flag to the command
+
+   ```sh
+   bundle exec jekyll serve --livereload
    ```
 
-For detailed installation instructions, check out Jekyll's official documentation: [Jekyll Documentation](https://jekyllrb.com/docs/installation/).
-````
+8. **Build for Production**: If you want to create a production build of the site, run:
+   ```sh
+   bundle exec jekyll build
+   ```

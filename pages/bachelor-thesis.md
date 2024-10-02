@@ -5,7 +5,7 @@ permalink: /bachelor-thesis
 icon: fa-solid fa-graduation-cap
 ---
 
-# Open-source dog breed identification built with Fast.ai's CNN using transfer learning 🐕
+# Open-source Dog Breed Identification built with Fast.ai's CNN using Transfer Learning 🐕
 
 ---
 
@@ -24,7 +24,5 @@ I have future goals of further developing the model with more dog breed images, 
 
 Do go ahead and read the thesis for more in-depth knowledge, or expand upon my work by cloning, and messing around with my code.
 
----
-
 <p>My dog Laban ❤️</p>
-<img src='https://github.com/krullmizter/dog-breed-id-fastai/blob/main/laban.jpg?raw=1' loading="lazy"/>
+<img src='https://github.com/krullmizter/dog-breed-id-fastai/blob/main/laban.jpg?raw=1' alt="My dog Laban ❤️" loading="lazy"/>

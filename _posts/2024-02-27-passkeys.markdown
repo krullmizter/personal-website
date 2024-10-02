@@ -6,55 +6,61 @@ date: 2024-02-27 21:30:00 +0300
 categories: passwords
 tags: [passwords, encryption, cybersecurity]
 featured_image: /assets/images/passkeys-overview.png
-image-source: https://chat.openai.com/
+content-source: https://chat.openai.com/
 tldr: So as we all know, passwords are just bad. They are only good for when you want to get into that very prestigious German nightclub. Passkeys is the secure and convenient way to move towards a passwordless future.
 ---
 
 ## Passwords = bad
+
 Passwords, while a familiar concept deeply ingrained in our daily online interactions such as banking, social networking, and shopping, are fundamentally flawed. We've gotten used to always filling in our email and password when signing up for a new service or app, but rarely do we choose a 35 character long random string of letter, numbers and characters. The tendency of users to reuse passwords for ease of use, compromises the security of the systems that we use. The practice of reusing passwords as our primary security measure increases the risk of both our digital and "real-world" lives.
 
 <hr />
 
 ## I don't care!
-But Samuel, I don’t care. Well, you should. I won’t go into details of my views and preachings around passwords, and online hygiene. But I always go back to a conversation that I had with a family member. 
 
-* <b>Ok, so you don’t care about passwords and their reuse?</b>
-* <i>No I don't</i> 
-* <b>So you don’t care that people can view, and openly enter your systems and apps?</b> 
-* <i>No, I don’t care, I have nothing to hide</i>
-* <b>Ok if you don’t care, and have nothing to hide. Why don't you then just publish everything publicly? We can begin to open up your accounts, and I’ll begin to post them online, let's also unlock your front door and let people come in and go through your photo albums, sensitive documents, stuff you have in the freezer, and also let them stand and watch over you whilst you work and eat at home.</b>
+But Samuel, I don’t care. Well, you should. I won’t go into details of my views and preachings around passwords, and online hygiene. But I always go back to a conversation that I had with a family member.
 
-They said that they didn’t want to do this... 
+- <b>Ok, so you don’t care about passwords and their reuse?</b>
+- <i>No I don't</i>
+- <b>So you don’t care that people can view, and openly enter your systems and apps?</b>
+- <i>No, I don’t care, I have nothing to hide</i>
+- <b>Ok if you don’t care, and have nothing to hide. Why don't you then just publish everything publicly? We can begin to open up your accounts, and I’ll begin to post them online, let's also unlock your front door and let people come in and go through your photo albums, sensitive documents, stuff you have in the freezer, and also let them stand and watch over you whilst you work and eat at home.</b>
+
+They said that they didn’t want to do this...
 
 We often think of our “real world” and online lives as separate things. But as technologies, and the internet grows into more parts of our lives, we also invite more and more eyes, ears, and control. Having bad passwords, and also reusing them, just makes this entry step into our lives easier. Having your iCloud password set to: ilovesamuel, will indeed invite almost anyone that really wants to, to access your photos. If your home surveillance system has the same password set as your compromised iCloud password, it would be a good idea to change it to something better, if you don't want someone watching you move around in your own house. These are of course scary scenarios that don't happen to everyone, people with bad passwords aren't always attacked and exploited, and people with 35 character passwords are also attacked and exploited. But the chances are greater, and the risks are bigger with bad and reused passwords.
 
 <hr />
 
 ## Passkeys
-Passkeys could be the password salvation and a new type of technology that would allow the transition from reused passwords to better security and privacy. Passkeys are one way that we are moving towards passwordless authentication. 
+
+Passkeys could be the password salvation and a new type of technology that would allow the transition from reused passwords to better security and privacy. Passkeys are one way that we are moving towards passwordless authentication.
 
 <b>Passkeys let users sign in and authenticate themselves on services and apps with something else than passwords</b>, i.e. something that they can't reuse and remember. Passkeys allow the use of biometrics, and other technologies to authenticate oneself. In the same way, you unlock your phone, you could use the same fingerprint, or facial recognition system to sign up or log in to Google Drive, or a Facebook account. It's easier, more convenient, and far more secure.
 
-Passkeys have been supported and developed by industry leaders and foundations such as Google, Apple, Microsoft, the World Wide Web Consortium (W3C), the FIDO Alliance (Fast Identity Online), among others, as a FIDO and Web Authentication standard. These systems and standards are being implemented, and they've also already been implemented, onto various apps, websites, and services. Some of the services where you can use passkeys are Microsoft, Google, Adobe, PayPal, WhatsApp, etc. [Here](https://passkeys.directory/){:target="_blank"} is an up-to-date list of all services that allow passkeys.
+Passkeys have been supported and developed by industry leaders and foundations such as Google, Apple, Microsoft, the World Wide Web Consortium (W3C), the FIDO Alliance (Fast Identity Online), among others, as a FIDO and Web Authentication standard. These systems and standards are being implemented, and they've also already been implemented, onto various apps, websites, and services. Some of the services where you can use passkeys are Microsoft, Google, Adobe, PayPal, WhatsApp, etc. [Here](https://passkeys.directory/){:target="\_blank"} is an up-to-date list of all services that allow passkeys.
 
 Passkeys work with public-key cryptographic key pairs, this means that each website that we use passkeys with has different key pairs, so no reusability! The online service that you sign in with a passkey has your public key, and you have the private key. This private key can be stored on any device that supports this key pair technology so for example your smartphone, iPad, PC, etc. This is “key” because if for example, Facebook’s authentication database gets compromised, and all of its data (public keys) are stolen, they are useless. This is because of the key pair solution, they don’t have your private key, so they can’t use it to log in to other services, even if you can authenticate yourself with your devices using your passkey (private key).
 
 Related blog posts:
-* [Read more about digital encryption in my other blog post](https://www.samuelgranvik.tech/digital-encryption-overview)
-* [Here you can also read more about FIDO and MFA](https://www.samuelgranvik.tech/fido)
+
+- [Read more about digital encryption in my other blog post](https://www.samuelgranvik.tech/digital-encryption-overview)
+- [Here you can also read more about FIDO and MFA](https://www.samuelgranvik.tech/fido)
 
 <hr />
 
 ## Why?
-Passkeys are more resilient towards phishing attempts (but don’t stop them all together), and brute-force as well as credential-stuffing attacks. That is because your biometric data can’t (not now at least) be brute-forced or guessed. There is however an evergrowing fear of the storage and use of the biometric data that we provide services and business, but that’s another story. Also, no biometric data gets transferred to the service you are signing in to when you sign in with passkeys, biometrics is only used on your device to authenticate yourself. 
+
+Passkeys are more resilient towards phishing attempts (but don’t stop them all together), and brute-force as well as credential-stuffing attacks. That is because your biometric data can’t (not now at least) be brute-forced or guessed. There is however an evergrowing fear of the storage and use of the biometric data that we provide services and business, but that’s another story. Also, no biometric data gets transferred to the service you are signing in to when you sign in with passkeys, biometrics is only used on your device to authenticate yourself.
 
 Phishing involves the use of social-engineering attacks to trick a user into revealing their user data, such as passwords. These come in all types of forms and sizes, but most commonly you find them in your email inbox, as emails from your “bank” wanting you to log in, and verify some “unauthorized” transactions, just click here! But when we use passkeys, then the bad-actor can’t steal anything useful, due to the fact that we use public-key cryptography to authenticate ourselves. There is no password to steal because we don’t know what to share with the fake bank account email link.
 
-{% include image-source.html image_path="/assets/images/password-types.png" alt_text="password-types" image_src="https://goteleport.com/blog/passkeys/" %}
+{% include content-source.html image_path="/assets/images/password-types.png" alt_text="password-types" image_src="https://goteleport.com/blog/passkeys/" %}
 
 <hr />
 
 ## But.
+
 There are some downsides to using passkeys instead of good 'ol passwords. If you for example lose your phone, which has been registered as the main passkey for your online services and apps, then you need to reset your accounts with some form of provided options such as recovery codes, emails, phone numbers, contacting customer support, and/or using another device that your are logged into your account on. The recovery of accounts is easier to do deal with when it comes to regular password accounts since you can just log in with your good 'ol fashioned password123. As stated, you are quite dependent on your devices when you are using passkeys, they are needed for all your authentications.
 
 Passkeys are not that new, but during the 2020s the technology and aim towards passwordless authentication has gained momentum, but their overall implementations has been quite slow. It requires that more services, apps, and businesses begins to implement and allow the use of passkeys. We also need additional and stronger standards that pinpoint the development, implementations, and other aspects of using passkeys in all types of services and businesses. The general public also needs to be educated and made aware of the positive aspects of passkeys, and why passwords aren’t that good in the long run.
@@ -62,20 +68,23 @@ Passkeys are not that new, but during the 2020s the technology and aim towards p
 <b>Passkey Pros & Cons</b>
 
 Pros:
-* Easing the use of digital services
-* Enhanced online security
-* No need to remember and/or store passwords
-* Looking cool
+
+- Easing the use of digital services
+- Enhanced online security
+- No need to remember and/or store passwords
+- Looking cool
 
 Cons:
-* Device dependency
-* Recovery issues
-* Not all services have passkeys implemented
-* Looking too cool sometimes
+
+- Device dependency
+- Recovery issues
+- Not all services have passkeys implemented
+- Looking too cool sometimes
 
 <hr />
 
 ## Conclusion
+
 So hey, let's start using passkeys! I’d still recommend that you have unique and varied passwords for all those sites that don’t support passkeys. I mean I don’t think that your local bowling alley will support passkeys for their lane booking site any time soon, but who knows? Having a password manager lets you organize your accounts, and passwords without needing to remember all of them all the time. Mangers such as 1Password lets you organize and view which of your sites you use a passkey for. Using MFA and other security tools, such as a Yubikey is also “key” to securing your online (and real-world) lives.
 
-{% include image-source.html image_path="/assets/images/passkey.gif" alt_text="passkey" image_src="https://giphy.com/gifs/grandfathered-gf-3o6EhUURXxQXKGTdkc" %}
+{% include content-source.html image_path="/assets/images/passkey.gif" alt_text="passkey" image_src="https://giphy.com/gifs/grandfathered-gf-3o6EhUURXxQXKGTdkc" %}

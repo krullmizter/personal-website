@@ -5,9 +5,10 @@ date: 2023-10-30 10:30:02 +0300
 categories: security
 tags: [2fa, passwords]
 featured_image: /assets/images/mfa.jpg
-image-source: https://www.hsph.harvard.edu/information-technology/2022/10/03/october-is-cybersecurity-month-week-1/
+content-source: https://www.hsph.harvard.edu/information-technology/2022/10/03/october-is-cybersecurity-month-week-1/
 tldr: What is FIDO2? Well, FIDO stands for Fast Identity Online. It is an open-source authentication standard, and its main goals are to improve online security, mainly via user authentication processes. There is a group, or alliance, called the FIDO Alliance, which is made up of various tech companies that come together to develop these processes, best practices, and standards.
 ---
+
 Two-factor authentication (2FA) and multi-factor authentication (MFA) have been around for quite some time. MFA is the broader term of the two. They consist of you having to input something else in conjunction with your password to log in. That is, you need two <i>secrets</i> to authenticate. Every time you need to add an additional password or code in addition to your password, it's a form of MFA.
 
 MFAs can be categorized into three categories:
@@ -50,8 +51,9 @@ The U2F protocol involves physical keys, often USB keys used with a fingerprint 
 ![Yubikeys](/assets/images/yubikey.png)
 
 The FIDO2 involves two components:
--   WebAuthn: is used with web applications to let websites use FIDO2 devices to do authentication.
--   Client to Authentication Protocol (CTAP): It is a protocol that lets FIDO2 devices and user devices (computers, smartphones, etc.) do secure authentication.
+
+- WebAuthn: is used with web applications to let websites use FIDO2 devices to do authentication.
+- Client to Authentication Protocol (CTAP): It is a protocol that lets FIDO2 devices and user devices (computers, smartphones, etc.) do secure authentication.
 
 The issues with MFA are the need for additional steps to be performed by the user, so that might lead to users not implementing MFA. It also comes with additional implementations for developers and companies to add MFA to their products and services. But the positives are much greater than the negatives. I mean in this day and age we need stronger authentications. Passwords aren't cutting it these days. A good internet user would need to use: a password manager, MFA, and good computer and internet hygiene. Passkeys are also something that has been brought up, and they might aid the authentication dilemma. I might write some about password managers, passkeys, and so on.
 

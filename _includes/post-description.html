@@ -81,11 +81,11 @@
     class="featured-image"
     style="background-image: url({{ page.featured_image | default: '../../assets/images/default-blog-post-image.jpg' }});"
   ></div>
-  {% if page.image-source %}
+  {% if page.content-source %}
   <div class="source">
     Featured image source:
-    <a href="{{ page.image-source }}" target="_blank"
-      >{{ page.image-source }}</a
+    <a href="{{ page.content-source }}" target="_blank"
+      >{{ page.content-source }}</a
     >
   </div>
   {% endif %}

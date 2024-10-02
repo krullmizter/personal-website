@@ -4,7 +4,7 @@ title: "Pi-hole"
 subtitle: A pie that blocks everything.
 date: 2024-02-12 17:30:00 +0300
 categories: privacy
-tags: [hardware, privacy, tips]
+tags: [Hardware, Privacy, Tips]
 featured_image: /assets/images/pihole.png
 content-source: https://cdcloudlogix.com/simple-guide-pi-hole-on-raspberry-pi-with-ipv6/
 tldr: A pi-hole is an open-source DNS sinkhole, able to block ads, trackers and other content on a network wide scale. This is a quick overview of what it is, how its used and what it can do.

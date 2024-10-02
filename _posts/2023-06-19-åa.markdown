@@ -6,6 +6,7 @@ categories: education
 featured_image: /assets/images/akademi.jpg
 content-source: https://www.studyopportunities.online/
 tldr: This fall, I started my master's program in computer engineering at Åbo Akademi University, with an expected graduation date in 2025.
+tags: [Education]
 ---
 
 I've really enjoyed this new academic journey. Continuing my studies in a field that is relevant to my interests has worked well for me.

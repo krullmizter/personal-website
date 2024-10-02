@@ -198,6 +198,14 @@ li:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
+.post-content {
+  margin: 20px 0;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
 .connect {
   font-size: 18px;
 }
@@ -331,6 +339,13 @@ li:not(:last-of-type) {
   }
 }
 
+.return {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
 @media (max-width: $breakpoint-desktop) {
   .blog-posts-post {
     flex-basis: 50%;
@@ -353,23 +368,36 @@ li:not(:last-of-type) {
   border: none;
 }
 
+.post-content > p:first-of-type::first-letter {
+  font-size: 2.5em;
+  font-weight: 600;
+  float: left;
+  margin-right: 8px;
+  line-height: 1;
+}
+
 // Post Descriptions
 .post-description {
-  margin-bottom: 15px;
-
   &-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h1 {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 0;
       font-family: inherit;
+      font-size: 40px;
+      margin: 0;
     }
 
     h3 {
       font-weight: 300;
       font-style: italic;
       font-family: inherit;
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 15px;
     }
   }
 
@@ -389,19 +417,15 @@ li:not(:last-of-type) {
   }
 
   &-badge {
-    text-transform: capitalize;
-    display: inline-block;
-    padding: 5px;
+    text-transform: uppercase;
+    padding: 10px 15px;
     color: map-get($colors, white);
     background-color: map-get($colors, grey-dark);
-    font-size: 50%;
     font-weight: 700;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
-    vertical-align: baseline;
     border-radius: $border-radius;
-    margin-left: 10px;
   }
 }
 

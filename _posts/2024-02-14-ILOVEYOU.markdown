@@ -4,7 +4,7 @@ title: "ILOVEYOU"
 subtitle: You've got mail, and I love you! The cyber worm that loved everyone
 date: 2024-02-14 10:30:00 +0300
 categories: malware-analysis
-tags: [malware, cybersecurity, history]
+tags: [Malware, Cybersecurity, History]
 featured_image: /assets/images/iloveyou-outlook.png
 content-source: https://www.forbes.com/sites/daveywinder/2020/05/04/this-20-year-old-virus-infected-50-million-windows-computers-in-10-days-why-the-iloveyou-pandemic-matters-in-2020/
 tldr: During the internet boom of the 2000s, a simple email caused chaos across the interwebs when people began receiving out-of-the-blue love confessions from coworkers, and loved ones.

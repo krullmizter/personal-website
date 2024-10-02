@@ -4,7 +4,7 @@ title: "Data Brokers"
 subtitle: "What are data brokers? What do they offer, and can I get a student discount?"
 date: 2024-06-25 19:00:00 +0300
 categories: privacy
-tags: [privacy, tips]
+tags: [Privacy, Tips]
 featured_image: /assets/images/data-brokers-cover.png
 content-source: https://chat.openai.com/
 tldr: A data broker or data broker service is an individual or company that collects, analyses and processes personal information and data from various sources. The goal is to combine the data and sell the processed and categorised data to a buyer via a licensing agreement.

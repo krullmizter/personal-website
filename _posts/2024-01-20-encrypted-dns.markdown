@@ -3,7 +3,7 @@ layout: post
 title: "Encrypted DNS"
 date: 2024-01-20 17:25:02 +0300
 categories: cybersecurity
-tags: [dns, encryption, privacy]
+tags: [Encryption, Privacy]
 featured_image: /assets/images/dns.png
 content-source: https://chat.openai.com
 tldr: The domain name (DNS) system is a crucial part of the past, current and future functions of the internet. Encrypted DNS services, protocols, and technologies are a way of, just as the name suggests, to encrypt DNS traffic. This blog post will go more into this area.

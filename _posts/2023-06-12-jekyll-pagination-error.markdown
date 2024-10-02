@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll Pagination Error"
 date: 2023-06-12 10:30:02 +0300
 categories: jekyll
-tags: [tips, ruby]
+tags: [Tips, Ruby]
 featured_image: /assets/images/jekyll-pagination.png
 content-source: https://blog.webjeda.com/jekyll-pagination/
 tldr: Change the name of your blog file from `blog.html` to `index.html`, and use the entire correct relative path in your config file. A tip, remember to restart your local development server when making changes to the `_config.yml` file.

@@ -4,7 +4,7 @@ title: "APIs, REST & SOAP"
 subtitle: "All humans need to REST, and I do hope most of us use SOAP"
 date: 2024-03-04 16:08:00 +0300
 categories: webdev
-tags: [webdev, apis]
+tags: [Webdev, API]
 featured_image: /assets/images/api-cover.png
 content-source: https://chat.openai.com/
 tldr: When it comes to seamless data transmission, we can use APIs. This blog post will look into the fine lines that separate REST vs. SOAP architectures, as well as the core concepts of APIs, JSON & XML.

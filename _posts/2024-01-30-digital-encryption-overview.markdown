@@ -3,7 +3,7 @@ layout: post
 title: "Digital Encryption Overview"
 date: 2024-01-31 01:25:00 +0300
 categories: cybersecurity
-tags: [encryption, privacy, cryptography]
+tags: [Encryption, Privacy, Cryptography]
 featured_image: /assets/images/encryption.png
 content-source: https://chat.openai.com
 tldr: We rarely see digital encryption, as most things digital, but encryption is huge part of all the parts of our everyday digital life.

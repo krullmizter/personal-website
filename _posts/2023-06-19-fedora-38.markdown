@@ -3,7 +3,7 @@ layout: post
 title: "Initial thoughts on Fedora 38"
 date: 2023-10-24 21:05:02 +0300
 categories: software
-tags: [linux, fedora, operating system]
+tags: [Linux, Review, Software]
 featured_image: /assets/images/fedora.jpg
 content-source: https://www.zdnet.com/article/fedora-38-beta-has-arrived-and-it-heralds-a-spectacular-upcoming-release/
 tldr: I've always liked to work with UNIX based OSs, I don't know as a developer one almost always gets to work with some form of UNIX.

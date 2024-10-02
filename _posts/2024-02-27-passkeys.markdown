@@ -4,7 +4,7 @@ title: "Passkeys"
 subtitle: "My username is password, and my password is password"
 date: 2024-02-27 21:30:00 +0300
 categories: passwords
-tags: [passwords, encryption, cybersecurity]
+tags: [Passwords, Encryption, Cybersecurity]
 featured_image: /assets/images/passkeys-overview.png
 content-source: https://chat.openai.com/
 tldr: So as we all know, passwords are just bad. They are only good for when you want to get into that very prestigious German nightclub. Passkeys is the secure and convenient way to move towards a passwordless future.

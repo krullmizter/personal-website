@@ -1,6 +1,11 @@
-<div class="linked-source">
-  <div style="background-image: url('{{ include.image_path }}');"></div>
+<div class="linked">
+  <div
+    class="linked-content"
+    style="background-image: url('{{ include.image_path }}');"
+  ></div>
+
+  <div class="source">
+    Source:
+    <a href="{{ include.image_src }}" target="_blank">{{include.image_src}}</a>
+  </div>
 </div>
-<p>
-  <a class="source" href="{{ include.image_src }}" target="_blank">Source</a>
-</p>

@@ -2,14 +2,24 @@
 ---
 
 // Variables
-$green-primary: #00b700;
-$green-secondary: #32c532;
-$grey-primary: #bbbbbb;
-$grey-dark: #404040;
-$grey-darkest: #212121;
-$white: #ffffff;
-$black: #181818;
-$code-bg: rgb(33, 33, 33);
+$colors: (
+  green-primary: #00b700,
+  green-secondary: #32c532,
+  grey-primary: #bbbbbb,
+  grey-light: #828282,
+  grey-dark: #404040,
+  grey-darkest: #212121,
+  white: #ffffff,
+  black: #181818,
+  code-bg: rgb(33, 33, 33),
+);
+
+$transition: 0.25s ease-in-out;
+$border-radius: 7.5px;
+
+// Breakpoints
+$breakpoint-desktop: 1000px;
+$breakpoint-mobile: 700px;
 
 // Import statements
 @import "minima/skins/{{ site.minima.skin | default: 'classic' }}",
@@ -58,8 +68,8 @@ html:focus-within {
 // Selection Styles
 ::-moz-selection,
 ::selection {
-  color: $white;
-  background: $green-primary;
+  color: map-get($colors, white);
+  background: map-get($colors, green-primary);
 }
 
 // Utility Classes
@@ -76,8 +86,8 @@ html:focus-within {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 5px;
-  transition: 0.2s;
+  border-radius: $border-radius;
+  transition: $transition;
 }
 
 #topBtn:hover {
@@ -104,54 +114,69 @@ html:focus-within {
 // Links and Buttons
 a,
 a:visited {
-  color: $green-primary;
-  transition: 0.2s;
+  color: map-get($colors, green-primary);
+  transition: $transition;
 }
 
 a:hover {
-  color: $green-secondary;
-  transition: 0.2s;
+  color: map-get($colors, green-secondary);
+  transition: $transition;
   text-decoration: none;
 }
 
 a.site-title {
   font-weight: 500;
-  transition: 0.2s;
+  transition: $transition;
 
   &:hover {
-    color: $white;
+    color: map-get($colors, white);
     text-decoration: none;
   }
 }
 
-a.btn {
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  border: 2px solid;
-  border-radius: 3px;
-  padding: 5px;
-  color: $grey-primary;
+@mixin button-styles($bg-color, $text-color) {
+  margin-top: 15px;
+  border: 1.8px solid;
+  font-weight: 600;
+  border-radius: $border-radius;
+  padding: 10px 15px;
+  color: $text-color;
+  background-color: transparent;
   text-decoration: none;
-  transition: 0.2s;
+  transition: $transition;
+  vertical-align: middle;
+  line-height: 1.5;
+
+  display: inline-flex;
+  align-items: center;
 
   &:hover {
-    background-color: $green-primary;
-    border-color: $green-primary;
-    color: $white;
+    background-color: darken($bg-color, 10%);
+    border-color: darken($bg-color, 10%);
+    color: map-get($colors, white);
   }
+}
+
+a.btn {
+  @include button-styles(
+    map-get($colors, green-primary),
+    map-get($colors, grey-primary)
+  );
 
   &::after {
-    content: "\f105";
+    content: "\f0da";
     font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    margin-left: 2.5px;
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 1em;
+    line-height: 1;
   }
 }
 
 // Typography and Text
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Courier New", Courier, monospace, "Brush Script MT", cursive;
   font-weight: 600;
 }
@@ -169,6 +194,11 @@ h4 {
   font-size: 20px;
 }
 
+li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+// Intro Styles
 .intro {
   &-wrapper {
     display: flex;
@@ -177,7 +207,7 @@ h4 {
     align-items: center;
     gap: 20px;
 
-    @media (max-width: 700px) {
+    @media (max-width: $breakpoint-mobile) {
       flex-wrap: wrap;
     }
 
@@ -188,9 +218,9 @@ h4 {
   }
 
   &-image {
-    flex: 0 0 200px;
-    width: 200px;
-    height: 200px;
+    flex: 0 0 250px;
+    width: 250px;
+    height: 250px;
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -226,6 +256,30 @@ h4 {
   }
 }
 
+.featured-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 600px) {
+    height: 200px;
+  }
+
+  @media (max-width: 400px) {
+    height: 150px;
+  }
+}
+
+.content-section {
+  padding: 20px;
+  border-radius: $border-radius;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #212121;
+}
+
 // Blog Posts
 .blog-posts {
   display: flex;
@@ -239,7 +293,7 @@ h4 {
     flex: 1 1 25%;
 
     a {
-      transition: 0.2s;
+      transition: $transition;
       text-decoration: none;
       color: inherit;
 
@@ -249,7 +303,8 @@ h4 {
     }
 
     &-description {
-      background-color: $grey-darkest;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #212121;
       padding: 15px;
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px;
@@ -272,10 +327,22 @@ h4 {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: $breakpoint-desktop) {
   .blog-posts-post {
     flex-basis: 50%;
   }
+}
+
+.tags-wrapper {
+  margin-bottom: 10px;
+}
+
+.tags {
+  padding: 10px;
+  background-color: #404040;
+  color: #bbb;
+  border-radius: 5px;
+  border: none;
 }
 
 // Post Descriptions
@@ -294,6 +361,7 @@ h4 {
     h3 {
       font-weight: 300;
       font-style: italic;
+      font-family: inherit;
     }
   }
 
@@ -316,26 +384,61 @@ h4 {
     text-transform: capitalize;
     display: inline-block;
     padding: 5px;
-    color: $white;
-    background-color: $grey-dark;
+    color: map-get($colors, white);
+    background-color: map-get($colors, grey-dark);
     font-size: 50%;
     font-weight: 700;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: 7.5px;
+    border-radius: $border-radius;
     margin-left: 10px;
   }
 }
 
+.post-share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > a {
+    margin-left: 5px;
+  }
+}
+
+.source {
+  font-style: italic;
+}
+
+.linked {
+  width: 100%;
+  height: 30vh;
+
+  &-content {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #212121;
+}
+
 // Footer and Pagination
+footer {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #212121;
+}
 .footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  color: #828282;
+  color: map-get($colors, grey-light);
 
   > div {
     display: flex;
@@ -343,7 +446,10 @@ h4 {
     flex: 1 1 300px;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 10px;
+
+    > p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -353,91 +459,13 @@ h4 {
 
 .source {
   font-size: 13px;
-  color: #828282;
+  color: map-get($colors, grey-light);
   font-style: italic;
 }
 
 // Additional Styles
 .wrapper {
-  max-width: calc(1000px - (30px * 2));
-}
-
-hr {
-  margin: 25px 0;
-  border: 0;
-  height: 1px;
-  background: $grey-dark;
-}
-
-iframe {
-  width: 100%;
-}
-
-.linked-source {
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  > div {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
-.content-section {
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: $grey-darkest;
-}
-
-.tags {
-  padding: 10px;
-  background-color: $grey-dark;
-  color: $grey-primary;
-  border-radius: 5px;
-  border: none;
-
-  &-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 10px;
-  }
-}
-
-.post-share {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-
-  a {
-    margin: 0 5px;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
-.blog-posts-post h3 {
-  font-weight: 600;
-}
-
-a.page-link:hover {
-  color: $white;
-}
-
-.site-header,
-.site-nav,
-.site-footer {
-  background-color: $code-bg;
+  max-width: calc(1000px - (30px * 2)); // Adjust for padding
+  margin: 0 auto;
+  padding: 0 15px;
 }

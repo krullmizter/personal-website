@@ -1,88 +1,93 @@
 {% if design == "posts" %}
-    <article class="blog-posts-post" data-tags="{{ post.tags | join: ' ' }}">
-        <a href="{{ post.url }}">
-            {% if post.featured_image %}
-                <div class="blog-posts-post-image" style="background-image: url(' {{ post.featured_image }}');"></div>
-            {% else %}
-                <div class="blog-posts-post-image" style="background-image: url( '../../assets/images/default-blog-post-image.jpg');"></div>
-            {% endif %}
+<article class="blog-posts-post" data-tags="{{ post.tags | join: ' ' }}">
+  <a href="{{ post.url }}">
+    {% if post.featured_image %}
+    <div
+      class="blog-posts-post-image"
+      style="background-image: url(' {{ post.featured_image }}');"
+    ></div>
+    {% else %}
+    <div
+      class="blog-posts-post-image"
+      style="
+        background-image: url('../../assets/images/default-blog-post-image.jpg');
+      "
+    ></div>
+    {% endif %}
 
-            <div class="blog-posts-post-description">
-                <h4>{{ post.title }}</h4>
+    <div class="blog-posts-post-description">
+      <h4>{{ post.title }}</h4>
 
-                <p>{{ post.date | date: "%B %d, %Y" }} &#183;
-                    <span>
-                    📖 {% assign words = post.content | split: " " | size %}
-                    {% if words < 360 %}
-                        1 min
-                    {% else %}
-                        {{ words | divided_by: 180 }} mins
-                    {% endif %}
-                    </span>
-                </p>
-    
-                {% if post.tldr %}
-                    <p>{{ post.tldr | strip_html | truncate: 100 }} </p>
-                {% else %}
-                    <p>{{ post.excerpt | strip_html | truncate: 100 }} </p>
-                {% endif %}
-            </div>
-        </a>
-    </article>
+      <p>
+        {{ post.date | date: "%B %d, %Y" }} &#183;
+        <span>
+          📖 {% assign words = post.content | split: " " | size %} {% if words <
+          360 %} 1 min {% else %} {{ words | divided_by: 180 }} mins {% endif %}
+        </span>
+      </p>
+
+      {% if post.tldr %}
+      <p>{{ post.tldr | strip_html | truncate: 100 }}</p>
+      {% else %}
+      <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      {% endif %}
+    </div>
+  </a>
+</article>
 
 {% else %}
-    <div class="post-description">
-        <div class="post-description-heading">
-            <h1>
-                {{ page.title }}
-    
-                {% if page.categories.size > 0 %}
-                    <span class="post-description-badge">{{ page.categories }}</span>
-                {% endif %}
-            </h1>
-    
-            {% if page.subtitle and page.subtitle.size > 0 %}
-                <h3>{{ page.subtitle }}</h3>
-            {% endif %}
-        </div>
+<div class="post-description">
+  <div class="post-description-heading">
+    <h1>
+      {{ page.title }} {% if page.categories.size > 0 %}
+      <span class="post-description-badge">{{ page.categories }}</span>
+      {% endif %}
+    </h1>
 
-        <hr />
+    {% if page.subtitle and page.subtitle.size > 0 %}
+    <h3>{{ page.subtitle }}</h3>
+    {% endif %}
+  </div>
 
-        <ul class="post-description-info">
-            <li>
-                {{ page.date | date: "%B %d, %Y" }} &#183;
-                <span>
-                📖 {% assign words = page.content | split: " " | size %}
-                {% if words < 360 %}
-                    1 min
-                {% else %}
-                    {{ words | divided_by: 180 }} mins
-                {% endif %}
-                </span>
-            </li>
-            
-            {% if page.tags and page.tags.size > 0 %}
-                <li> Tags:
-                    {% for tag in page.tags %}
-                    <span>{{ tag }}</span>{% unless forloop.last %}<span>,</span>{% endunless %}
-                    {% endfor %}
-                </li>
-            {% endif %}
-        </ul>
+  <hr />
 
-        <div class="post-share">
-            <p>Share:</p>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}" target="_blank"><i class="fa fa-linkedin fa"></i></a>
-        </div>
+  <ul class="post-description-info">
+    <li>
+      {{ page.date | date: "%B %d, %Y" }} &#183;
+      <span>
+        📖 {% assign words = page.content | split: " " | size %} {% if words <
+        360 %} 1 min {% else %} {{ words | divided_by: 180 }} mins {% endif %}
+      </span>
+    </li>
 
-        {% if page.featured_image %}
-            <img src="{{ page.featured_image }}" alt="Featured Image"/>
-        {% else %}
-            <img src="{{ '../../assets/images/default-blog-post-image.jpg' }}" alt="Featured Image"/>
-        {% endif %}
+    {% if page.tags and page.tags.size > 0 %}
+    <li>
+      Tags: {% for tag in page.tags %} <span>{{ tag }}</span>{% unless
+      forloop.last %}<span>,</span>{% endunless %} {% endfor %}
+    </li>
+    {% endif %}
+  </ul>
 
-        {% if page.image-source %}
-            <p class="feature-image-source">Image source: {{ page.image-source }}</p>
-        {% endif %}
-    </div>
+  <div class="post-share">
+    <p>Share:</p>
+    <a
+      href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}"
+      target="_blank"
+      ><i class="fa fa-linkedin fa"></i
+    ></a>
+  </div>
+
+  <div
+    class="featured-image"
+    style="background-image: url({{ page.featured_image | default: '../../assets/images/default-blog-post-image.jpg' }});"
+  ></div>
+  {% if page.image-source %}
+  <div class="source">
+    Featured image source:
+    <a href="{{ page.image-source }}" target="_blank"
+      >{{ page.image-source }}</a
+    >
+  </div>
+  {% endif %}
+</div>
 {% endif %}

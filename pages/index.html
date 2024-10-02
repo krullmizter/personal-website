@@ -10,6 +10,8 @@ icon: fa-solid fa-house
     <div
       class="intro-image"
       style="background-image: url('/assets/images/profile-2.jpg')"
+      role="img"
+      aria-label="Profile picture of Samuel Granvik"
     ></div>
 
     <div class="intro-text">
@@ -30,78 +32,78 @@ icon: fa-solid fa-house
       </p>
     </div>
   </div>
+</div>
 
-  <div class="about-section">
-    <h2>About Me</h2>
-    <p>
-      I'm currently working with <strong>React Native</strong>,
-      <strong>TypeScript</strong>, and <strong>C#</strong> at
-      <strong>
-        <a
-          link
-          href="https://www.linkedin.com/in/samuel-granvik/"
-          target="_blank"
-          >Beamex</a
-        ></strong
-      >, all while pursuing my computer engineering Master’s degree at
-      <strong>
-        <a
-          href="https://www.abo.fi/en/study-subject/computer-engineering/"
-          target="_blank"
-          >Åbo Akademi</a
-        ></strong
-      >
-    </p>
-  </div>
+<section class="content-section">
+  <h2>About Me</h2>
+  <p>
+    I'm currently working with <strong>React Native</strong>,
+    <strong>TypeScript</strong>, and <strong>C#</strong> at
+    <strong
+      ><a
+        href="https://www.linkedin.com/in/samuel-granvik/"
+        target="_blank"
+        rel="noopener"
+        >Beamex</a
+      ></strong
+    >, all while pursuing my computer engineering Master’s degree at
+    <strong
+      ><a
+        href="https://www.abo.fi/en/study-subject/computer-engineering/"
+        target="_blank"
+        rel="noopener"
+        >Åbo Akademi</a
+      ></strong
+    >.
+  </p>
+</section>
 
-  <div class="skills-section">
-    <h2>Skills</h2>
-    <ul>
-      <li><b>Languages:</b> Ruby, PHP, Python, JavaScript, C#, C</li>
-      <li>
-        <b>Web Development:</b> Laravel, WordPress, SCSS, Node.js, TypeScript,
-        React
-      </li>
-      <li><b>Databases:</b> Redis, MySQL, GraphQL, MongoDB</li>
-      <li>
-        <b>Topics of Interest:</b> Cybersecurity, Digital Privacy, Reverse
-        Engineering, Deep Learning
-      </li>
-    </ul>
-  </div>
-
+<section class="content-section">
+  <h2>Skills</h2>
+  <ul>
+    <li><b>Languages:</b> Ruby, PHP, Python, JavaScript, C#, C</li>
+    <li>
+      <b>Web Development:</b> Laravel, WordPress, SCSS, Node.js, TypeScript,
+      React
+    </li>
+    <li><b>Databases:</b> Redis, MySQL, GraphQL, MongoDB</li>
+    <li>
+      <b>Topics of Interest:</b> Cybersecurity, Digital Privacy, Reverse
+      Engineering, Deep Learning
+    </li>
+  </ul>
   <p>
     Connect with me on:
-    <a href="https://github.com/krullmizter/" target="_blank"
+    <a href="https://github.com/krullmizter/" target="_blank" rel="noopener"
       ><i class="fa-brands fa-github"></i
     ></a>
     <a
       href="https://www.linkedin.com/in/samuel-granvik-93977013a/"
       target="_blank"
+      rel="noopener"
       ><i class="fa-brands fa-linkedin-in"></i
     ></a>
   </p>
-</div>
+</section>
 
-<hr />
+<section class="content-section">
+  <h2>Bachelor's Thesis</h2>
+  <h4>
+    Open-source dog breed identification built with Fast.ai’s CNN using transfer
+    learning 🐕
+  </h4>
+  <p>
+    Feel free to read about my bachelor's thesis regarding deep learning, dog
+    breed identification, Fast.ai, Python, and much more.
+  </p>
+  <a href="{% link pages/bachelor-thesis.md %}" class="btn">Read More</a>
+</section>
 
-<h2>Bachelor's Thesis</h2>
-<h4>
-  Open-source dog breed identification built with Fast.ai’s CNN using transfer
-  learning 🐕
-</h4>
-<p>
-  Feel free to read about my bachelor's thesis regarding deep learning, dog
-  breed identification, Fast.ai, Python, and much more.
-</p>
-<a href="{% link pages/bachelor-thesis.md %}" class="btn">Read More</a>
-<hr />
-
-<h2>Latest Posts</h2>
-
-<div class="blog-posts">
-  {% assign design = 'posts' %} {% for post in site.posts limit: 6 %} {% include
-  post-description.html design=design %} {% endfor %}
-</div>
-
-<a href="{% link blog/index.html %}" class="btn">More Posts</a>
+<section class="content-section">
+  <h2>Latest Posts</h2>
+  <div class="blog-posts">
+    {% assign design = 'posts' %} {% for post in site.posts limit: 6 %} {%
+    include post-description.html design=design %} {% endfor %}
+  </div>
+  <a href="{% link blog/index.html %}" class="btn">More Posts</a>
+</section>

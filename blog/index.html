@@ -9,30 +9,26 @@ paginate_path: "/blog/page:num"
 <div class="tags-wrapper">
   <h1>All Blog Posts</h1>
 
-  {% assign all_tags = site.posts | map: 'tags' | flatten | uniq %}
-  <select class="tags">
-    <option class="tag" data-tag="">All</option>
-    {% for tag in all_tags %}
-    <option class="tag" data-tag="{{ tag }}">{{ tag }}</option>
-    {% endfor %}
-  </select>
-</div>
-
-<div class="blog-posts">
-  {% assign design = 'posts' %} {% for post in paginator.posts %} {% include
-  post-description.html design=design %} {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
+  {% assign all_tags = site.posts | map: 'tags' | flatten | uniq %} {% if
+  site.posts.size > 0 %}
+  <div>
+    <p>Filter by Tags:</p>
+    <select class="tags" aria-label="Filter blog posts by tags" id="tag-filter">
+      <option class="tag" data-tag="">All</option>
+      {% for tag in all_tags %}
+      <option class="tag" data-tag="{{ tag }}">{{ tag }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  {% else %}
+  <p>No Posts Found</p>
   {% endif %}
+</div>
 
-  <span class="page-number"
-    >Page {{ paginator.page }} of {{ paginator.total_pages }}</span
-  >
-
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+<div class="blog-posts" id="blog-posts">
+  {% if site.posts.size > 0 %} {% assign design = 'posts' %} {% for post in
+  site.posts %} {% include post-description.html design=design %} {% endfor %}
+  {% else %}
+  <p>No Posts Found</p>
   {% endif %}
 </div>

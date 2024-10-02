@@ -1,11 +1,12 @@
 # Site settings
-title: Samuel Granvik | A Personal Portfolio
+title: Samuel Granvik
 description: "This website serves as: a portfolio and digital CV, a window into my personal interests, and well-crafted blog posts."
-keywords: "portfolio, digital CV, blog, Samuel Granvik"
+keywords: "Samuel Granvik, portfolio, digital CV, blog, web developer, software engineer"
 author: "Samuel Granvik"
 url: "https://www.samuelgranvik.tech"
 github_username: krullmizter
 lang: en
+timezone: Europe/Helsinki
 
 # Theme settings
 remote_theme: jekyll/minima
@@ -34,9 +35,10 @@ header_pages:
   - blog/index.html
   - pages/bachelor-thesis.md
 
-# Build settings
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-remote-theme
 
@@ -47,3 +49,8 @@ exclude:
   - vendor/
   - README.md
   - LICENSE
+  - .git/
+  - .sass-cache/
+  - .DS_Store
+  - _drafts/
+  - tests/
